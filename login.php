@@ -34,21 +34,6 @@
         <!-- Register and social buttons -->
         <div class="text-center">
             <p class="mb-2">Become a <a href="volenteer.php" class="text-decoration-none">Volunteer</a></p>
-            <p class="mb-3">or sign up with:</p>
-            <div class="d-flex justify-content-center">
-                <button type="button" class="btn btn-light btn-floating mx-1">
-                    <i class="fab fa-facebook-f"></i>
-                </button>
-                <button type="button" class="btn btn-light btn-floating mx-1">
-                    <i class="fab fa-google"></i>
-                </button>
-                <button type="button" class="btn btn-light btn-floating mx-1">
-                    <i class="fab fa-twitter"></i>
-                </button>
-                <button type="button" class="btn btn-light btn-floating mx-1">
-                    <i class="fab fa-github"></i>
-                </button>
-            </div>
         </div>
     </form>
 </div>

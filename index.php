@@ -78,7 +78,7 @@
                             <div class="meta mb-3">
                                 <div><a href="#">Sept 10, 2018</a></div>
                                 <div><a href="#">Admin</a></div>
-                                <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+
                             </div>
                             <h3 class="heading mt-3"><a href="#">Hurricane Irma has devastated Florida</a></h3>
                             <p>A small river named Duden flows by their place and supplies it with the necessary
@@ -94,7 +94,7 @@
                             <div class="meta mb-3">
                                 <div><a href="#">Sept 10, 2018</a></div>
                                 <div><a href="#">Admin</a></div>
-                                <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+
                             </div>
                             <h3 class="heading mt-3"><a href="#">Hurricane Irma has devastated Florida</a></h3>
                             <p>A small river named Duden flows by their place and supplies it with the necessary
@@ -110,7 +110,7 @@
                             <div class="meta mb-3">
                                 <div><a href="#">Sept 10, 2018</a></div>
                                 <div><a href="#">Admin</a></div>
-                                <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+
                             </div>
                             <h3 class="heading mt-3"><a href="#">Hurricane Irma has devastated Florida</a></h3>
                             <p>A small river named Duden flows by their place and supplies it with the necessary
@@ -125,6 +125,49 @@
         </div>
     </section>
 
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center mb-5 pb-3">
+                <div class="col-md-7 heading-section ftco-animate text-center">
+                    <h2 class="mb-4">VOLENTEER TESTIMONIALS</h2>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
+                        live the blind texts.</p>
+                </div>
+            </div>
+
+            <!-- First Row -->
+            <div class="carousel-item active">
+                <div class="row">
+                    <div class="col-md-4">
+                        <iframe width="328" height="583" src="https://www.youtube.com/embed/xtOaQKamtgo"
+                            title="Suraj,He is one of the most connected volunteers to students as a strict and frank  teacher.#shorts"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+
+                    <div class="col-md-4">
+                        <iframe width="328" height="583" src="https://www.youtube.com/embed/8DddCdq5BF4"
+                            title="Vishakha is one of those volunteers who gets attached to students like a friend #motivation #shorts"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="col-md-4">
+                        <iframe width="328" height="583" src="https://www.youtube.com/embed/5QBGRd0g0AA"
+                            title="Ritika is one of those volunteers, who truly believes in growth of kids through education only.#yai"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-12 text-center mt-5">
+            <p><a href="testimonial.php" class="btn btn-white px-3 py-2 mt-2">SEE ALL</a></p>
+        </div>
+    </section>
 
 
     <section class="ftco-gallery">
@@ -201,32 +244,63 @@
             </div>
             <div class="row d-flex">
                 <div class="col-md-4 d-flex ftco-animate">
-                    <div class="card">
-                        <img src="images/image_1.jpg" class="card-img-top" alt="Blog Image 1">
-                        <div class="card-body">
+                    <div class="blog-entry align-self-stretch">
+                        <a href="blog-single.php" class="block-20"
+                            style="background-image: url('images/image_1.jpg');"></a>
+                        <div class="text p-4 d-block">
                             <div class="meta mb-3">
                                 <div><a href="#">Sept 10, 2018</a></div>
                                 <div><a href="#">Admin</a></div>
-                                <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+
                             </div>
-                            <h3 class="heading mt-3"><a href="#" class="btn btn-link" data-toggle="collapse"
-                                    data-target="#collapseCard1">Hurricane Irma has devastated Florida</a></h3>
-                            <div id="collapseCard1" class="collapse">
-                                <p>A small river named Duden flows by their place and supplies it with the necessary
-                                    regelialia.</p>
-                            </div>
+                            <h3 class="heading mt-3"><a href="single-blog.php">Hurricane Irma has devastated Florida</a>
+                            </h3>
+                            <p>A small river named Duden flows by their place and supplies it with the necessary
+                                regelialia.</p>
                         </div>
                     </div>
                 </div>
+                <div class="col-md-4 d-flex ftco-animate">
+                    <div class="blog-entry align-self-stretch">
+                        <a href="blog-single.php" class="block-20"
+                            style="background-image: url('images/image_2.jpg');"></a>
+                        <div class="text p-4 d-block">
+                            <div class="meta mb-3">
+                                <div><a href="#">Sept 10, 2018</a></div>
+                                <div><a href="#">Admin</a></div>
 
-                <!-- Repeat the above card structure for other blog entries -->
+                            </div>
+                            <h3 class="heading mt-3"><a href="single-blog.php">Hurricane Irma has devastated Florida</a>
+                            </h3>
+                            <p>A small river named Duden flows by their place and supplies it with the necessary
+                                regelialia.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex ftco-animate">
+                    <div class="blog-entry align-self-stretch">
+                        <a href="blog-single.php" class="block-20"
+                            style="background-image: url('images/image_3.jpg');"></a>
+                        <div class="text p-4 d-block">
+                            <div class="meta mb-3">
+                                <div><a href="#">Sept 10, 2018</a></div>
+                                <div><a href="#">Admin</a></div>
 
+                            </div>
+                            <h3 class="heading mt-3"><a href="single-blog.php">Hurricane Irma has devastated Florida</a>
+                            </h3>
+                            <p>A small river named Duden flows by their place and supplies it with the necessary
+                                regelialia.</p>
+                        </div>
+                    </div>
+                </div>
                 <div class="col-md-12 text-center">
                     <p><a href="blog.php" class="btn btn-white px-3 py-2 mt-2">SEE ALL</a></p>
                 </div>
             </div>
         </div>
     </section>
+
 
 
     <section class="ftco-section">
@@ -247,7 +321,7 @@
                             <div class="meta mb-3">
                                 <div><a href="#">Sept 10, 2018</a></div>
                                 <div><a href="#">Admin</a></div>
-                                <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+
                             </div>
                             <h3 class="heading mt-3"><a href="#">Hurricane Irma has devastated Florida</a></h3>
                             <p>A small river named Duden flows by their place and supplies it with the necessary
@@ -263,7 +337,7 @@
                             <div class="meta mb-3">
                                 <div><a href="#">Sept 10, 2018</a></div>
                                 <div><a href="#">Admin</a></div>
-                                <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+
                             </div>
                             <h3 class="heading mt-3"><a href="#">Hurricane Irma has devastated Florida</a></h3>
                             <p>A small river named Duden flows by their place and supplies it with the necessary
@@ -279,7 +353,7 @@
                             <div class="meta mb-3">
                                 <div><a href="#">Sept 10, 2018</a></div>
                                 <div><a href="#">Admin</a></div>
-                                <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+
                             </div>
                             <h3 class="heading mt-3"><a href="#">Hurricane Irma has devastated Florida</a></h3>
                             <p>A small river named Duden flows by their place and supplies it with the necessary
@@ -293,6 +367,7 @@
             </div>
         </div>
     </section>
+
 
     <section class="ftco-section-3 img" style="background-image: url(images/bg_3.jpg);">
         <div class="overlay"></div>

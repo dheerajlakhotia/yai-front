@@ -79,6 +79,22 @@ body {
   background-color: #fff;
 }
 
+/* Customize the size of the video previews */
+.short-video {
+  width: 100%;
+  height: 180px; /* Adjust the height as needed */
+  border: 1px solid #ddd; /* Add a border for separation */
+  border-radius: 5px; /* Optional: Add some border radius for a rounded look */
+  margin-bottom: 15px; /* Add some space between videos */
+}
+
+/* Center the carousel controls */
+.carousel-control-prev,
+.carousel-control-next {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .bg-image-vertical {
   position: relative;
   overflow: hidden;

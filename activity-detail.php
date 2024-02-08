@@ -18,91 +18,58 @@
         </div>
     </div>
 
-    <div class="container-fluid">
-        <div class="card my-5">
-            <div class="card-body">
-                <h5 class="card-title">Table with hoverable rows</h5>
+    <main id="main">
+        <section class="ftco-section">
 
-                <!-- Table with hoverable rows -->
-                <table class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th scope="col">S.no</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Position</th>
-                            <th scope="col">location</th>
-                            <th scope="col">date</th>
-                            <th scope="col">description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Brandon Jacob</td>
-                            <td>Designer</td>
-                            <td>28</td>
-                            <td>2016-05-25</td>
-                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima tempore ratione
-                                voluptates ut neque corporis dolorum perspiciatis ipsa accusamus veritatis porro
-                                inventore repellendus, sapiente fugiat animi doloribus quas eligendi voluptatem
-                                similique non tenetur necessitatibus vitae beatae? Perspiciatis doloribus debitis,
-                                dolore animi veniam quos, in porro ex provident omnis facilis incidunt.</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Brandon Jacob</td>
-                            <td>Designer</td>
-                            <td>28</td>
-                            <td>2016-05-25</td>
-                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima tempore ratione
-                                voluptates ut neque corporis dolorum perspiciatis ipsa accusamus veritatis porro
-                                inventore repellendus, sapiente fugiat animi doloribus quas eligendi voluptatem
-                                similique non tenetur necessitatibus vitae beatae? Perspiciatis doloribus debitis,
-                                dolore animi veniam quos, in porro ex provident omnis facilis incidunt.</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Brandon Jacob</td>
-                            <td>Designer</td>
-                            <td>28</td>
-                            <td>2016-05-25</td>
-                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima tempore ratione
-                                voluptates ut neque corporis dolorum perspiciatis ipsa accusamus veritatis porro
-                                inventore repellendus, sapiente fugiat animi doloribus quas eligendi voluptatem
-                                similique non tenetur necessitatibus vitae beatae? Perspiciatis doloribus debitis,
-                                dolore animi veniam quos, in porro ex provident omnis facilis incidunt.</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Brandon Jacob</td>
-                            <td>Designer</td>
-                            <td>28</td>
-                            <td>2016-05-25</td>
-                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima tempore ratione
-                                voluptates ut neque corporis dolorum perspiciatis ipsa accusamus veritatis porro
-                                inventore repellendus, sapiente fugiat animi doloribus quas eligendi voluptatem
-                                similique non tenetur necessitatibus vitae beatae? Perspiciatis doloribus debitis,
-                                dolore animi veniam quos, in porro ex provident omnis facilis incidunt.</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Brandon Jacob</td>
-                            <td>Designer</td>
-                            <td>28</td>
-                            <td>2016-05-25</td>
-                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima tempore ratione
-                                voluptates ut neque corporis dolorum perspiciatis ipsa accusamus veritatis porro
-                                inventore repellendus, sapiente fugiat animi doloribus quas eligendi voluptatem
-                                similique non tenetur necessitatibus vitae beatae? Perspiciatis doloribus debitis,
-                                dolore animi veniam quos, in porro ex provident omnis facilis incidunt.</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <!-- End Table with hoverable rows -->
 
+            <div class="container">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Pills Tabs</h5>
+
+                        <!-- Pills Tabs -->
+                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                                    aria-selected="true">Home</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-profile" type="button" role="tab"
+                                    aria-controls="pills-profile" aria-selected="false">Profile</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-contact" type="button" role="tab"
+                                    aria-controls="pills-contact" aria-selected="false">Contact</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content pt-2" id="myTabContent">
+                            <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                                aria-labelledby="home-tab">
+                                Sunt est soluta temporibus accusantium neque nam maiores cumque temporibus. Tempora
+                                libero non est unde veniam est qui dolor. Ut sunt iure rerum quae quisquam autem
+                                eveniet perspiciatis odit. Fuga sequi sed ea saepe at unde.
+                            </div>
+                            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="profile-tab">
+                                Nesciunt totam et. Consequuntur magnam aliquid eos nulla dolor iure eos quia.
+                                Accusantium distinctio omnis et atque fugiat. Itaque doloremque aliquid sint quasi
+                                quia distinctio similique. Voluptate nihil recusandae mollitia dolores. Ut
+                                laboriosam voluptatum dicta.
+                            </div>
+                            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="contact-tab">
+                                Saepe animi et soluta ad odit soluta sunt. Nihil quos omnis animi debitis cumque.
+                                Accusantium quibusdam perspiciatis qui qui omnis magnam. Officiis accusamus impedit
+                                molestias nostrum veniam. Qui amet ipsum iure. Dignissimos fuga tempore dolor.
+                            </div>
+                        </div><!-- End Pills Tabs -->
+
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
+        </section>
+    </main>
 
 
 
