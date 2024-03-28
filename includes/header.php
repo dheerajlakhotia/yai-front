@@ -2,7 +2,31 @@
 <html lang="en">
 
 <head>
-    <title>YAI-YOUTH AGAINST ILLITERACY</title>
+    <?php
+    // Get the current page file name
+    $current_page = basename($_SERVER['PHP_SELF']);
+    
+    // Define an array to map page file names to their corresponding titles
+    $page_titles = array(
+        'index.php' => 'YAI',
+        'about.php' => 'About-YAI',
+        'activity.php' => 'Activity-YAI',
+        'volenteer.php' => 'Become Volunteer-YAI',
+        'donate.php' => 'Donate-YAI',
+        'blog.php' => 'Blog-YAI',
+        'gallery.php' => 'Gallery-YAI',
+        'event.php' => 'Events-YAI',
+        'location.php' => 'Locations-YAI',
+        'contact.php' => 'Contact-YAI',
+        'login.php' => 'Login-YAI',
+        'testimonial.php' => 'Testimonial-YAI'
+    );
+
+    // Set the page title based on the current page file name
+    $title = isset($page_titles[$current_page]) ? $page_titles[$current_page] : 'YAI-YOUTH AGAINST ILLITERACY';
+    ?>
+
+    <title><?php echo $title; ?></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -22,6 +46,8 @@
 
     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="css/jquery.timepicker.css">
+    <!-- Add your favicon link -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 

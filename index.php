@@ -93,12 +93,7 @@
                         <a href="blog-single.php" class="block-20"
                             style="background-image: url('images/image_2.jpg');"></a>
                         <div class="text p-4 d-block">
-                            <div class="meta mb-3">
-                                <div><a href="#">Sept 10, 2018</a></div>
-                                <div><a href="#">Admin</a></div>
-
-                            </div>
-                            <h3 class="heading mt-3"><a href="#">Hurricane Irma has devastated Florida</a></h3>
+                            <h3 class="heading mt-3"><a href="#">Hurricane Irma has devastated Florida  </a></h3>
                             <p>A small river named Duden flows by their place and supplies it with the necessary
                                 regelialia.</p>
                         </div>
