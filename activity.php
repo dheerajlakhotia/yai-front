@@ -20,20 +20,128 @@
         </div>
     </div>
 
+    <!-- Filtering Options Section -->
+    <section class="ftco-section bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center">
+                    <h2 class="mb-4">Filter Options</h2>
+                    <form action="#" method="GET">
+                        <div class="form-group">
+                            <label for="city">Select City:</label>
+                            <select class="form-control" id="city" name="city">
+                                <option value="bikaner">Bikaner</option>
+                                <option value="jaipur">Jaipur</option>
+                                <option value="jodhpur">Jodhpur</option>
+                                <!-- Add more cities as needed -->
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Select Date:</label>
+                            <input type="date" class="form-control" id="date" name="date">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Apply Filters</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <section class="ftco-section">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 ftco-animate">
+                <div class="col-md-4 ftco-animate mb-3">
                     <div class="cause-entry">
                         <a href="#" class="img" style="background-image: url(images/cause-1.jpg);"></a>
-                        <div class="text p-3 p-md-4">
-                            <h3><a>01-01-2024 Avtivity</a></h3>
-                            <button type="button" class="btn btn-primary" data-toggle="modal"
-                                data-target=".bd-example-modal-lg">SEE DETAILS</button>
+                        <div class="text p-3 p-md-4 d-flex flex-column justify-content-between">
+                            <h6>
+                                <span class="mr-2"><i class="bi bi-calendar"></i></span><a>01-01-2024</a>
+                            </h6>
+                            <span class="mr-2"><i class="bi bi-geo-alt"></i> BIKANER</span>
+                            <div class="d-flex justify-content-center mt-4">
+                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                    data-target=".bd-example-modal-lg">SEE DETAILS</button>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="col-md-4 ftco-animate mb-3">
+                    <div class="cause-entry">
+                        <a href="#" class="img" style="background-image: url(images/cause-1.jpg);"></a>
+                        <div class="text p-3 p-md-4 d-flex flex-column justify-content-between">
+                            <h6>
+                                <span class="mr-2"><i class="bi bi-calendar"></i></span><a>01-01-2024</a>
+                            </h6>
+                            <span class="mr-2"><i class="bi bi-geo-alt"></i> BIKANER</span>
+                            <div class="d-flex justify-content-center mt-4">
+                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                    data-target=".bd-example-modal-lg">SEE DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 ftco-animate mb-3">
+                    <div class="cause-entry">
+                        <a href="#" class="img" style="background-image: url(images/cause-1.jpg);"></a>
+                        <div class="text p-3 p-md-4 d-flex flex-column justify-content-between">
+                            <h6>
+                                <span class="mr-2"><i class="bi bi-calendar"></i></span><a>01-01-2024</a>
+                            </h6>
+                            <span class="mr-2"><i class="bi bi-geo-alt"></i> BIKANER</span>
+                            <div class="d-flex justify-content-center mt-4">
+                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                    data-target=".bd-example-modal-lg">SEE DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 ftco-animate mb-3">
+                    <div class="cause-entry">
+                        <a href="#" class="img" style="background-image: url(images/cause-1.jpg);"></a>
+                        <div class="text p-3 p-md-4 d-flex flex-column justify-content-between">
+                            <h6>
+                                <span class="mr-2"><i class="bi bi-calendar"></i></span><a>01-01-2024</a>
+                            </h6>
+                            <span class="mr-2"><i class="bi bi-geo-alt"></i> BIKANER</span>
+                            <div class="d-flex justify-content-center mt-4">
+                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                    data-target=".bd-example-modal-lg">SEE DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 ftco-animate mb-3">
+                    <div class="cause-entry">
+                        <a href="#" class="img" style="background-image: url(images/cause-1.jpg);"></a>
+                        <div class="text p-3 p-md-4 d-flex flex-column justify-content-between">
+                            <h6>
+                                <span class="mr-2"><i class="bi bi-calendar"></i></span><a>01-01-2024</a>
+                            </h6>
+                            <span class="mr-2"><i class="bi bi-geo-alt"></i> BIKANER</span>
+                            <div class="d-flex justify-content-center mt-4">
+                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                    data-target=".bd-example-modal-lg">SEE DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 ftco-animate mb-3">
+                    <div class="cause-entry">
+                        <a href="#" class="img" style="background-image: url(images/cause-1.jpg);"></a>
+                        <div class="text p-3 p-md-4 d-flex flex-column justify-content-between">
+                            <h6>
+                                <span class="mr-2"><i class="bi bi-calendar"></i></span><a>01-01-2024</a>
+                            </h6>
+                            <span class="mr-2"><i class="bi bi-geo-alt"></i> BIKANER</span>
+                            <div class="d-flex justify-content-center mt-4">
+                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                    data-target=".bd-example-modal-lg">SEE DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
         </div>
@@ -86,8 +194,24 @@
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
         </div>
+
     </div>
 
+    <div class="row mb-5">
+        <div class="col text-center">
+            <div class="block-27">
+                <ul>
+                    <li><a href="#">&lt;</a></li>
+                    <li class="active"><span>1</span></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">&gt;</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
     </div>
 

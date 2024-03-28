@@ -22,7 +22,9 @@ $active_page = basename($_SERVER['PHP_SELF'], ".php");
                 <li class="nav-item <?php if($active_page == 'activity') echo 'active'; ?>"><a href="activity.php"
                         class="nav-link">Activity</a></li>
                 <li class="nav-item <?php if($active_page == 'volenteer') echo 'active'; ?>"><a href="volenteer.php"
-                        class="nav-link">Become Volunteer</a></li>
+                        class="nav-link">Volunteer</a></li>
+                <li class="nav-item <?php if($active_page == 'internship') echo 'active'; ?>"><a href="internship.php"
+                        class="nav-link">Internship</a></li>
                 <li class="nav-item <?php if($active_page == 'donate') echo 'active'; ?>"><a href="donate.php"
                         class="nav-link">Donate</a></li>
 
@@ -37,6 +39,7 @@ $active_page = basename($_SERVER['PHP_SELF'], ".php");
                         <a class="dropdown-item" href="gallery.php">Gallery</a>
                         <a class="dropdown-item" href="event.php">Events</a>
                         <a class="dropdown-item" href="location.php">Locations</a>
+                        <a class="dropdown-item" href="testimonial.php">Testimonial</a>
                     </div>
                 </li>
                 <!-- Dropdown Menu End -->

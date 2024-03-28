@@ -19,7 +19,8 @@
         'location.php' => 'Locations-YAI',
         'contact.php' => 'Contact-YAI',
         'login.php' => 'Login-YAI',
-        'testimonial.php' => 'Testimonial-YAI'
+        'testimonial.php' => 'Testimonial-YAI',
+        'internship.php' => 'Internship-YAI'
     );
 
     // Set the page title based on the current page file name
@@ -32,6 +33,10 @@
 
     <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,400i,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/icons">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">

@@ -57,23 +57,10 @@
                             class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Dheeraj</h5>
-
-
-                            <!-- Social Media Icons -->
-                            <div class="social-icons">
-                                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
-                                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                                <!-- Add more social media icons as needed -->
-                            </div>
                             <div class="contact-icons">
                                 <p class="card-text">
                                     <i class="fas fa-envelope"></i> dheeraj@example.com
                                 </p>
-                                <p class="card-text">
-                                    <i class="fas fa-phone"></i> +1234567890
-                                </p>
-                                <!-- Add more contact details as needed -->
                             </div>
                         </div>
                     </div>
@@ -86,23 +73,10 @@
                             class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Riya</h5>
-
-
-                            <!-- Social Media Icons -->
-                            <div class="social-icons">
-                                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
-                                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                                <!-- Add more social media icons as needed -->
-                            </div>
                             <div class="contact-icons">
                                 <p class="card-text">
                                     <i class="fas fa-envelope"></i> dheeraj@example.com
                                 </p>
-                                <p class="card-text">
-                                    <i class="fas fa-phone"></i> +1234567890
-                                </p>
-                                <!-- Add more contact details as needed -->
                             </div>
                         </div>
                     </div>
@@ -116,21 +90,52 @@
                             <h5 class="card-title">Rohan</h5>
 
 
-                            <!-- Social Media Icons -->
-                            <div class="social-icons">
-                                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
-                                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                                <!-- Add more social media icons as needed -->
-                            </div>
+
                             <div class="contact-icons">
                                 <p class="card-text">
                                     <i class="fas fa-envelope"></i> dheeraj@example.com
                                 </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- First Card -->
+                <div class="col-md-4">
+                    <div class="card my-3">
+                        <img src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29ufGVufDB8fDB8fHww"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Rohan</h5>
+
+
+
+                            <div class="contact-icons">
                                 <p class="card-text">
-                                    <i class="fas fa-phone"></i> +1234567890
+                                    <i class="fas fa-envelope"></i> dheeraj@example.com
                                 </p>
-                                <!-- Add more contact details as needed -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- First Card -->
+                <div class="col-md-4">
+                    <div class="card my-3">
+                        <img src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29ufGVufDB8fDB8fHww"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Rohan</h5>
+
+
+
+                            <div class="contact-icons">
+                                <p class="card-text">
+                                    <i class="fas fa-envelope"></i> dheeraj@example.com
+                                </p>
+
+
                             </div>
                         </div>
                     </div>

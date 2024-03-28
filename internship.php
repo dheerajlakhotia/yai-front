@@ -4,7 +4,7 @@
 
     <?php require_once'includes/navbar.php'?>
     <div class="hero-wrap"
-        style="background-image: url('https://images.unsplash.com/photo-1556566304-3f8d4bc2f00b?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"
+        style="background-image: url('https://plus.unsplash.com/premium_photo-1661783433420-ddc45d35004a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"
         data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">
@@ -12,16 +12,15 @@
                 data-scrollax-parent="true">
                 <div class="col-md-7 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
                     <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span
-                            class="mr-2"><a href="index.php">Home</a></span> <span>volenteer</span></p>
+                            class="mr-2"><a href="index.php">Home</a></span> <span>INTERNSHIP</span></p>
                     <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Be a
-                        Volunteer
+                        Intern
                     </h1>
                 </div>
             </div>
         </div>
     </div>
     <div class="container my-5">
-        <h2 class="text-center mb-4">BE A PART OF OUR FAMILY</h2>
         <form>
             <div class="form-group">
                 <label for="exampleInputname">Full Names <span style="color: red;">*</span></label>
@@ -113,7 +112,6 @@
                 <label class="form-check-label" for="exampleCheck1"><a href="images/YAI_RULES.pdf"
                         target="_blank">Accept YAI terms</a><span style="color: red;">*</span></label>
             </div>
-
 
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>

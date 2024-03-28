@@ -72,55 +72,61 @@
                 </div>
             </div>
             <div class="row d-flex">
-                <div class="col-md-4 d-flex ftco-animate">
-                    <div class="blog-entry align-self-stretch">
-                        <a href="blog-single.php" class="block-20"
-                            style="background-image: url('images/image_1.jpg');"></a>
-                        <div class="text p-4 d-block">
-                            <div class="meta mb-3">
-                                <div><a href="#">Sept 10, 2018</a></div>
-                                <div><a href="#">Admin</a></div>
-
+                <div class="col-md-4 ftco-animate">
+                    <div class="cause-entry">
+                        <a href="#" class="img" style="background-image: url(images/cause-1.jpg);"></a>
+                        <div class="text p-3 p-md-4 d-flex flex-column justify-content-between">
+                            <h6>
+                                <span class="mr-2"><i class="bi bi-calendar"></i></span><a>01-01-2024</a>
+                            </h6>
+                            <span class="mr-2"><i class="bi bi-geo-alt"></i> BIKANER</span>
+                            <div class="d-flex justify-content-center mt-4">
+                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                    data-target=".bd-example-modal-lg">SEE DETAILS</button>
                             </div>
-                            <h3 class="heading mt-3"><a href="#">Hurricane Irma has devastated Florida</a></h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary
-                                regelialia.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 d-flex ftco-animate">
-                    <div class="blog-entry align-self-stretch">
-                        <a href="blog-single.php" class="block-20"
-                            style="background-image: url('images/image_2.jpg');"></a>
-                        <div class="text p-4 d-block">
-                            <h3 class="heading mt-3"><a href="#">Hurricane Irma has devastated Florida  </a></h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary
-                                regelialia.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 d-flex ftco-animate">
-                    <div class="blog-entry align-self-stretch">
-                        <a href="blog-single.php" class="block-20"
-                            style="background-image: url('images/image_3.jpg');"></a>
-                        <div class="text p-4 d-block">
-                            <div class="meta mb-3">
-                                <div><a href="#">Sept 10, 2018</a></div>
-                                <div><a href="#">Admin</a></div>
-
+                <div class="col-md-4 ftco-animate">
+                    <div class="cause-entry">
+                        <a href="#" class="img" style="background-image: url(images/cause-1.jpg);"></a>
+                        <div class="text p-3 p-md-4 d-flex flex-column justify-content-between">
+                            <h6>
+                                <span class="mr-2"><i class="bi bi-calendar"></i></span><a>01-01-2024</a>
+                            </h6>
+                            <span class="mr-2"><i class="bi bi-geo-alt"></i> BIKANER</span>
+                            <div class="d-flex justify-content-center mt-4">
+                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                    data-target=".bd-example-modal-lg">SEE DETAILS</button>
                             </div>
-                            <h3 class="heading mt-3"><a href="#">Hurricane Irma has devastated Florida</a></h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary
-                                regelialia.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-12 text-center">
+                <div class="col-md-4 ftco-animate">
+                    <div class="cause-entry">
+                        <a href="#" class="img" style="background-image: url(images/cause-1.jpg);"></a>
+                        <div class="text p-3 p-md-4 d-flex flex-column justify-content-between">
+                            <h6>
+                                <span class="mr-2"><i class="bi bi-calendar"></i></span><a>01-01-2024</a>
+                            </h6>
+                            <span class="mr-2"><i class="bi bi-geo-alt"></i> BIKANER</span>
+                            <div class="d-flex justify-content-center mt-4">
+                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                    data-target=".bd-example-modal-lg">SEE DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 text-center mt-5">
                     <p><a href="activity.php" class="btn btn-white px-3 py-2 mt-2">SEE ALL</a></p>
                 </div>
             </div>
         </div>
     </section>
+
+
+
 
     <section class="ftco-section">
         <div class="container">
@@ -312,49 +318,70 @@
             <div class="row d-flex">
                 <div class="col-md-4 d-flex ftco-animate">
                     <div class="blog-entry align-self-stretch">
-                        <a href="blog-single.php" class="block-20"
-                            style="background-image: url('images/image_1.jpg');"></a>
+                        <a href="blog-single.php" class="block-20" style="background-image: url('images/event-1.jpg');">
+                        </a>
                         <div class="text p-4 d-block">
                             <div class="meta mb-3">
-                                <div><a href="#">Sept 10, 2018</a></div>
-                                <div><a href="#">Admin</a></div>
-
+                                <div><a>Sep. 10, 2018</a></div>
+                                <div><a>Admin</a></div>
                             </div>
-                            <h3 class="heading mt-3"><a href="#">Hurricane Irma has devastated Florida</a></h3>
+                            <h3 class="heading mb-4"><a>Fun day</a></h3>
+                            <p class="time-loc"><span class="mr-2"><i class="icon-clock-o"></i> 10:30AM-03:30PM</span>
+                                <span><i class="icon-map-o"></i> Venue Main Campus</span>
+                            </p>
                             <p>A small river named Duden flows by their place and supplies it with the necessary
                                 regelialia.</p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#exampleModalCenter">
+                                See Datails
+                            </button>
+
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 d-flex ftco-animate">
                     <div class="blog-entry align-self-stretch">
-                        <a href="blog-single.php" class="block-20"
-                            style="background-image: url('images/image_2.jpg');"></a>
+                        <a href="blog-single.php" class="block-20" style="background-image: url('images/event-1.jpg');">
+                        </a>
                         <div class="text p-4 d-block">
                             <div class="meta mb-3">
-                                <div><a href="#">Sept 10, 2018</a></div>
-                                <div><a href="#">Admin</a></div>
-
+                                <div><a>Sep. 10, 2018</a></div>
+                                <div><a>Admin</a></div>
                             </div>
-                            <h3 class="heading mt-3"><a href="#">Hurricane Irma has devastated Florida</a></h3>
+                            <h3 class="heading mb-4"><a>Fun day</a></h3>
+                            <p class="time-loc"><span class="mr-2"><i class="icon-clock-o"></i> 10:30AM-03:30PM</span>
+                                <span><i class="icon-map-o"></i> Venue Main Campus</span>
+                            </p>
                             <p>A small river named Duden flows by their place and supplies it with the necessary
                                 regelialia.</p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#exampleModalCenter">
+                                See Datails
+                            </button>
+
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 d-flex ftco-animate">
                     <div class="blog-entry align-self-stretch">
-                        <a href="blog-single.php" class="block-20"
-                            style="background-image: url('images/image_3.jpg');"></a>
+                        <a href="blog-single.php" class="block-20" style="background-image: url('images/event-1.jpg');">
+                        </a>
                         <div class="text p-4 d-block">
                             <div class="meta mb-3">
-                                <div><a href="#">Sept 10, 2018</a></div>
-                                <div><a href="#">Admin</a></div>
-
+                                <div><a>Sep. 10, 2018</a></div>
+                                <div><a>Admin</a></div>
                             </div>
-                            <h3 class="heading mt-3"><a href="#">Hurricane Irma has devastated Florida</a></h3>
+                            <h3 class="heading mb-4"><a>Fun day</a></h3>
+                            <p class="time-loc"><span class="mr-2"><i class="icon-clock-o"></i> 10:30AM-03:30PM</span>
+                                <span><i class="icon-map-o"></i> Venue Main Campus</span>
+                            </p>
                             <p>A small river named Duden flows by their place and supplies it with the necessary
                                 regelialia.</p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#exampleModalCenter">
+                                See Datails
+                            </button>
+
                         </div>
                     </div>
                 </div>
