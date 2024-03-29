@@ -4,25 +4,18 @@
 
     <?php require_once'includes/navbar.php'?>
 
-    <div class="hero-wrap"
-        style="background-image: url('https://plus.unsplash.com/premium_photo-1663040178972-ee1d45d33899?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"
-        data-stellar-background-ratio="0.5">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row no-gutters slider-text align-items-center justify-content-center"
-                data-scrollax-parent="true">
-                <div class="col-md-7 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
-                    <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span
-                            class="mr-2"><a href="index.php">Home</a></span> <span>About</span></p>
-                    <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">About Us</h1>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
 
     <section class="ftco-section">
         <div class="container">
+            <div class="row justify-content-center mb-5 pb-3">
+                <div class="col-md-7 heading-section ftco-animate text-center">
+                    <h2 class="mb-4">WHO WE ARE</h2>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
+                        live the blind texts.</p>
+                </div>
+            </div>
             <div class="row d-flex">
                 <div class="col-md-6 d-flex ftco-animate">
                     <div class="img img-about align-self-stretch"

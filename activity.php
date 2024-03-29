@@ -4,25 +4,18 @@
 
     <?php require_once'includes/navbar.php'?>
 
-    <div class="hero-wrap"
-        style="background-image: url('https://images.unsplash.com/photo-1622659097972-68f1d8c1829f?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"
-        data-stellar-background-ratio="0.5">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row no-gutters slider-text align-items-center justify-content-center"
-                data-scrollax-parent="true">
-                <div class="col-md-7 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
-                    <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span
-                            class="mr-2"><a href="index.php">Home</a></span> <span>activity</span></p>
-                    <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Activity</h1>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
     <!-- Filtering Options Section -->
-    <section class="ftco-section bg-light">
+    <section class="ftco-section">
         <div class="container">
+            <div class="row justify-content-center mb-5 pb-3">
+                <div class="col-md-7 heading-section ftco-animate text-center">
+                    <h2 class="mb-4">OUR DAILY ACTIVITY</h2>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
+                        live the blind texts.</p>
+                </div>
+            </div>
             <div class="row justify-content-center">
                 <div class="col-md-6 text-center">
                     <h2 class="mb-4">Filter Options</h2>
@@ -60,8 +53,8 @@
                             </h6>
                             <span class="mr-2"><i class="bi bi-geo-alt"></i> BIKANER</span>
                             <div class="d-flex justify-content-center mt-4">
-                                <button type="button" class="btn btn-primary" data-toggle="modal"
-                                    data-target=".bd-example-modal-lg">SEE DETAILS</button>
+                                <a type="button" class="btn btn-primary" href='activity-detail.php'>SEE
+                                    DETAILS</a>
                             </div>
                         </div>
                     </div>
@@ -75,8 +68,8 @@
                             </h6>
                             <span class="mr-2"><i class="bi bi-geo-alt"></i> BIKANER</span>
                             <div class="d-flex justify-content-center mt-4">
-                                <button type="button" class="btn btn-primary" data-toggle="modal"
-                                    data-target=".bd-example-modal-lg">SEE DETAILS</button>
+                                <a type="button" class="btn btn-primary" href='activity-detail.php'>SEE
+                                    DETAILS</a>
                             </div>
                         </div>
                     </div>
@@ -90,8 +83,8 @@
                             </h6>
                             <span class="mr-2"><i class="bi bi-geo-alt"></i> BIKANER</span>
                             <div class="d-flex justify-content-center mt-4">
-                                <button type="button" class="btn btn-primary" data-toggle="modal"
-                                    data-target=".bd-example-modal-lg">SEE DETAILS</button>
+                                <a type="button" class="btn btn-primary" href='activity-detail.php'>SEE
+                                    DETAILS</a>
                             </div>
                         </div>
                     </div>
@@ -105,8 +98,8 @@
                             </h6>
                             <span class="mr-2"><i class="bi bi-geo-alt"></i> BIKANER</span>
                             <div class="d-flex justify-content-center mt-4">
-                                <button type="button" class="btn btn-primary" data-toggle="modal"
-                                    data-target=".bd-example-modal-lg">SEE DETAILS</button>
+                                <a type="button" class="btn btn-primary" href='activity-detail.php'>SEE
+                                    DETAILS</a>
                             </div>
                         </div>
                     </div>
@@ -120,8 +113,8 @@
                             </h6>
                             <span class="mr-2"><i class="bi bi-geo-alt"></i> BIKANER</span>
                             <div class="d-flex justify-content-center mt-4">
-                                <button type="button" class="btn btn-primary" data-toggle="modal"
-                                    data-target=".bd-example-modal-lg">SEE DETAILS</button>
+                                <a type="button" class="btn btn-primary" href='activity-detail.php'>SEE
+                                    DETAILS</a>
                             </div>
                         </div>
                     </div>
@@ -135,8 +128,8 @@
                             </h6>
                             <span class="mr-2"><i class="bi bi-geo-alt"></i> BIKANER</span>
                             <div class="d-flex justify-content-center mt-4">
-                                <button type="button" class="btn btn-primary" data-toggle="modal"
-                                    data-target=".bd-example-modal-lg">SEE DETAILS</button>
+                                <a type="button" class="btn btn-primary" href='activity-detail.php'>SEE
+                                    DETAILS</a>
                             </div>
                         </div>
                     </div>
@@ -146,55 +139,6 @@
 
         </div>
     </section>
-    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="card my-5">
-                    <div class="card-body">
-                        <!-- Recent Activity -->
-                        <div class="card">
-                            <div class="filter">
-                                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                                    <li class="dropdown-header text-start">
-                                        <h6>Filter</h6>
-                                    </li>
-
-                                    <li><a class="dropdown-item" href="#">Today</a></li>
-                                    <li><a class="dropdown-item" href="#">This Month</a></li>
-                                    <li><a class="dropdown-item" href="#">This Year</a></li>
-                                </ul>
-                            </div>
-
-                            <div class="card-body">
-                                <h5 class="card-title">Recent Activity <span>| Today</span></h5>
-
-                                <div class="activity">
-
-                                    <div class="activity-item d-flex">
-                                        <div class="activite-label">32 min</div>
-                                        <i class='bi bi-circle-fill'></i>
-                                        <div class="activity-content">
-                                            Quia quae rerum <a href="#" class="fw-bold text-dark">explicabo officiis</a>
-                                            beatae
-                                        </div>
-                                    </div><!-- End activity item-->
-
-                                    <!-- Add more activity items as needed -->
-
-                                </div>
-
-                            </div>
-                        </div><!-- End Recent Activity -->
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-
     </div>
 
     <div class="row mb-5">
