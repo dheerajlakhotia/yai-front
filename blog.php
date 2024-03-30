@@ -46,7 +46,7 @@
                             <h3 class="heading mt-3"><a href="single-blog.php">Hurricane Irma has devastated Florida</a>
                             </h3>
                             <p>A small river named Duden flows by their place and supplies it with the necessary
-                                regelialia.</p>
+                                regelialia.</p><a href="single-blog.php">Read more <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -63,7 +63,7 @@
                             <h3 class="heading mt-3"><a href="single-blog.php">Hurricane Irma has devastated Florida</a>
                             </h3>
                             <p>A small river named Duden flows by their place and supplies it with the necessary
-                                regelialia.</p>
+                                regelialia.</p><a href="single-blog.php">Read more <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -80,7 +80,7 @@
                             <h3 class="heading mt-3"><a href="single-blog.php">Hurricane Irma has devastated Florida</a>
                             </h3>
                             <p>A small river named Duden flows by their place and supplies it with the necessary
-                                regelialia.</p>
+                                regelialia.</p><a href="single-blog.php">Read more <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -97,7 +97,7 @@
                             <h3 class="heading mt-3"><a href="single-blog.php">Hurricane Irma has devastated Florida</a>
                             </h3>
                             <p>A small river named Duden flows by their place and supplies it with the necessary
-                                regelialia.</p>
+                                regelialia.</p><a href="single-blog.php">Read more <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -114,7 +114,7 @@
                             <h3 class="heading mt-3"><a href="single-blog.php">Hurricane Irma has devastated Florida</a>
                             </h3>
                             <p>A small river named Duden flows by their place and supplies it with the necessary
-                                regelialia.</p>
+                                regelialia.</p><a href="single-blog.php">Read more <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -131,7 +131,7 @@
                             <h3 class="heading mt-3"><a href="single-blog.php">Hurricane Irma has devastated Florida</a>
                             </h3>
                             <p>A small river named Duden flows by their place and supplies it with the necessary
-                                regelialia.</p>
+                                regelialia.</p><a href="single-blog.php">Read more <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>

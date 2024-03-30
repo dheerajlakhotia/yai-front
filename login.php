@@ -36,6 +36,7 @@
             <div class="text-center">
                 <p class="mb-2 small">Become a <a href="volenteer.php" class="text-decoration-none">Volunteer</a></p>
             </div>
+            <span> <a href="index.php"><i class="bi bi-arrow-left"></i>Return Home</a></span>
         </form>
     </div>
 
