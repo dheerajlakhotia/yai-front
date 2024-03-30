@@ -3,42 +3,53 @@
 <body>
 
     <?php require_once'includes/navbar.php'?>
-
-
-
-    <!-- Filtering Options Section -->
     <section class="ftco-section">
         <div class="container">
-            <div class="row justify-content-center mb-5 pb-3">
+            <div class="row justify-content-center mb-1 pb-3">
                 <div class="col-md-7 heading-section ftco-animate text-center">
                     <h2 class="mb-4">OUR DAILY ACTIVITY</h2>
                     <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
                         live the blind texts.</p>
                 </div>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-md-6 text-center">
-                    <h2 class="mb-4">Filter Options</h2>
-                    <form action="#" method="GET">
-                        <div class="form-group">
-                            <label for="city">Select City:</label>
-                            <select class="form-control" id="city" name="city">
-                                <option value="bikaner">Bikaner</option>
-                                <option value="jaipur">Jaipur</option>
-                                <option value="jodhpur">Jodhpur</option>
-                                <!-- Add more cities as needed -->
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="date">Select Date:</label>
-                            <input type="date" class="form-control" id="date" name="date">
-                        </div>
-                        <button type="submit" class="btn btn-primary">Apply Filters</button>
-                    </form>
-                </div>
-            </div>
+
         </div>
     </section>
+    <!-- Filtering Options Section -->
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-4">
+            <form action="#" method="GET" class="row align-items-center">
+                <div class="col-6 col-md-5">
+                    <div class="form-group mb-2">
+                        <label for="city" class="visually-hidden">City:</label>
+                        <select class="form-control form-control-sm" id="city" name="city">
+                            <option value="bikaner">Bikaner</option>
+                            <option value="jaipur">Jaipur</option>
+                            <option value="jodhpur">Jodhpur</option>
+                            <!-- Add more cities as needed -->
+                        </select>
+                    </div>
+                </div>
+                <div class="col-6 col-md-5">
+                    <div class="form-group mb-2">
+                        <label for="date" class="visually-hidden">Date:</label>
+                        <input type="date" class="form-control form-control-sm" id="date" name="date">
+                    </div>
+                </div>
+                <div class="col-12 col-md-2">
+                    <button type="submit" class="btn btn-primary btn-sm btn-block">Apply</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
 
 
     <section class="ftco-section">

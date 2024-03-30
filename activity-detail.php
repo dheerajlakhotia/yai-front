@@ -1,115 +1,127 @@
 <?php require_once'includes/header.php'?>
 
 <body>
-    <?php
-$active_page = basename($_SERVER['PHP_SELF'], ".php");
-?>
+    <?php require_once'includes/navbar.php'?>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-white ftco_navbar single-nav" id="ftco-navbar">
+    <h2 class="text-center mt-5" style="text-decoration: underline;">11-03-2024</h2>
+
+    <section class="ftco-section">
         <div class="container">
-            <a href="index.php" style="display: inline-block; border-radius: 50%;">
-                <img src="images/yai-logo.jpg" alt="" style="max-height: 70px; max-width: 70px; border-radius: 50%;">
-            </a>
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
-                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="oi oi-menu"></span> Menu
-            </button>
-
-            <div class="collapse navbar-collapse" id="ftco-nav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item <?php if($active_page == 'home') echo 'active'; ?>"><a href="index.php"
-                            class="nav-link">Home</a></li>
-                    <li class="nav-item <?php if($active_page == 'about') echo 'active'; ?>"><a href="about.php"
-                            class="nav-link">About</a></li>
-                    <li class="nav-item <?php if($active_page == 'activity') echo 'active'; ?>"><a href="activity.php"
-                            class="nav-link">Activity</a></li>
-                    <li class="nav-item <?php if($active_page == 'volenteer') echo 'active'; ?>"><a href="volenteer.php"
-                            class="nav-link">Volunteer</a></li>
-                    <li class="nav-item <?php if($active_page == 'internship') echo 'active'; ?>"><a
-                            href="internship.php" class="nav-link">Internship</a></li>
-                    <li class="nav-item <?php if($active_page == 'donate') echo 'active'; ?>"><a href="donate.php"
-                            class="nav-link">Donate</a></li>
-
-                    <!-- Dropdown Menu Start -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            More
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="blog.php">Blog</a>
-                            <a class="dropdown-item" href="gallery.php">Gallery</a>
-                            <a class="dropdown-item" href="event.php">Events</a>
-                            <a class="dropdown-item" href="location.php">Locations</a>
-                            <a class="dropdown-item" href="testimonial.php">Testimonial</a>
-                        </div>
-                    </li>
-                    <!-- Dropdown Menu End -->
-
-                    <li class="nav-item <?php if($active_page == 'contact') echo 'active'; ?>"><a href="contact.php"
-                            class="nav-link">Contact</a></li>
-                    <li class="nav-item <?php if($active_page == 'login') echo 'active'; ?>"><a href="login.php"
-                            class="nav-link">Login</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-
-    <main id="main">
-        <section class="ftco-section">
-
-
-            <div class="container">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Pills Tabs</h5>
-
-                        <!-- Pills Tabs -->
-                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
-                                    aria-selected="true">Home</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-profile" type="button" role="tab"
-                                    aria-controls="pills-profile" aria-selected="false">Profile</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-contact" type="button" role="tab"
-                                    aria-controls="pills-contact" aria-selected="false">Contact</button>
-                            </li>
-                        </ul>
-                        <div class="tab-content pt-2" id="myTabContent">
-                            <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
-                                aria-labelledby="home-tab">
-                                Sunt est soluta temporibus accusantium neque nam maiores cumque temporibus. Tempora
-                                libero non est unde veniam est qui dolor. Ut sunt iure rerum quae quisquam autem
-                                eveniet perspiciatis odit. Fuga sequi sed ea saepe at unde.
-                            </div>
-                            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="profile-tab">
-                                Nesciunt totam et. Consequuntur magnam aliquid eos nulla dolor iure eos quia.
-                                Accusantium distinctio omnis et atque fugiat. Itaque doloremque aliquid sint quasi
-                                quia distinctio similique. Voluptate nihil recusandae mollitia dolores. Ut
-                                laboriosam voluptatum dicta.
-                            </div>
-                            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="contact-tab">
-                                Saepe animi et soluta ad odit soluta sunt. Nihil quos omnis animi debitis cumque.
-                                Accusantium quibusdam perspiciatis qui qui omnis magnam. Officiis accusamus impedit
-                                molestias nostrum veniam. Qui amet ipsum iure. Dignissimos fuga tempore dolor.
-                            </div>
-                        </div><!-- End Pills Tabs -->
-
+            <div class="row">
+                <div class="col-12">
+                    <div class="list-group" id="list-tab" role="tablist">
+                        <a class="list-group-item list-group-item-action active" id="list-home-list"
+                            data-bs-toggle="list" href="#list-home" role="tab" aria-controls="list-home">SAGAR ROAD</a>
+                        <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list"
+                            href="#list-profile" role="tab" aria-controls="list-profile">PAWANPURI</a>
+                        <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list"
+                            href="#list-messages" role="tab" aria-controls="list-messages">JAILROAD</a>
+                        <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="list"
+                            href="#list-settings" role="tab" aria-controls="list-settings">MP COLONY</a>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
-
-
+            <div class="row">
+                <div class="col-12">
+                    <div class="tab-content" id="nav-tabContent">
+                        <!-- first location  -->
+                        <div class="tab-pane fade show active" id="list-home" role="tabpanel"
+                            aria-labelledby="list-home-list">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">User</th>
+                                        <th scope="col">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Yash</td>
+                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet,
+                                            perferendis.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pawan</td>
+                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet,
+                                            perferendis Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- secound location  -->
+                        <div class="tab-pane fade" id="list-profile" role="tabpanel"
+                            aria-labelledby="list-profile-list">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">User</th>
+                                        <th scope="col">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Dheeraj</td>
+                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet,
+                                            perferendis Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- third location  -->
+                        <div class="tab-pane fade" id="list-messages" role="tabpanel"
+                            aria-labelledby="list-messages-list">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">User</th>
+                                        <th scope="col">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Neeraj</td>
+                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet,
+                                            perferendis.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Suraj</td>
+                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet,
+                                            perferendis.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Seema</td>
+                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet,
+                                            perferendis.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- fourth location -->
+                        <div class="tab-pane fade" id="list-settings" role="tabpanel"
+                            aria-labelledby="list-settings-list">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">User</th>
+                                        <th scope="col">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Ashish</td>
+                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet,
+                                            perferendis.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <?php require_once 'includes/footer.php' ?>
+</body>
+
+</html>

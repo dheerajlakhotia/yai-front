@@ -19,7 +19,9 @@
                     <option value="clothes">Clothes</option>
                     <option value="stationery">Stationery</option>
                 </select>
+                <span>we dont accept money as donation</span>
             </div>
+
 
             <!-- For Food, No Quantity Needed -->
 

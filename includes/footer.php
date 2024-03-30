@@ -14,46 +14,39 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="ftco-footer-widget mb-4">
-                        <h2 class="ftco-heading-2">Recent Blog</h2>
-                        <div class="block-21 mb-4 d-flex">
-                            <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
-                            <div class="text">
-                                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a>
-                                </h3>
-                                <div class="meta">
-                                    <div><a href="#"><span class="icon-calendar"></span> July 12, 2018</a></div>
-                                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="block-21 mb-4 d-flex">
-                            <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
-                            <div class="text">
-                                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a>
-                                </h3>
-                                <div class="meta">
-                                    <div><a href="#"><span class="icon-calendar"></span> July 12, 2018</a></div>
-                                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-                                </div>
-                            </div>
-                        </div>
+
+                <div class="col-md-2">
+                    <div class="ftco-footer-widget mb-4 ml-md-4">
+                        <h2 class="ftco-heading-2">Pages</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="py-2 d-block">Home</a></li>
+                            <li><a href="#" class="py-2 d-block">About</a></li>
+                            <li><a href="#" class="py-2 d-block">Activity</a></li>
+                            <li><a href="#" class="py-2 d-block">Gallery</a></li>
+                            <li><a href="#" class="py-2 d-block">Events</a></li>
+                            <li><a href="#" class="py-2 d-block">location</a></li>
+                            <li><a href="#" class="py-2 d-block">Testimonial</a></li>
+                        </ul>
+
                     </div>
                 </div>
                 <div class="col-md-2">
                     <div class="ftco-footer-widget mb-4 ml-md-4">
-                        <h2 class="ftco-heading-2">Site Links</h2>
+                        <h2 class="ftco-heading-2">Join Us</h2>
                         <ul class="list-unstyled">
-                            <li><a href="#" class="py-2 d-block">Home</a></li>
-                            <li><a href="#" class="py-2 d-block">About</a></li>
-                            <li><a href="#" class="py-2 d-block">Donate</a></li>
-                            <li><a href="#" class="py-2 d-block">Causes</a></li>
-                            <li><a href="#" class="py-2 d-block">Event</a></li>
-                            <li><a href="#" class="py-2 d-block">Blog</a></li>
+                            <li><a href="#" class="py-2 d-block">Be a volunteer</a></li>
+                            <li><a href="#" class="py-2 d-block">Internship</a></li>
                         </ul>
+
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="ftco-footer-widget mb-4 ml-md-4">
+                        <h2 class="ftco-heading-2">Importent</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="py-2 d-block">Site Map</a></li>
+                        </ul>
+
                     </div>
                 </div>
                 <div class="col-md-3">
@@ -95,6 +88,12 @@
                 stroke="#F96D00" />
         </svg></div>
 
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-migrate-3.0.1.min.js"></script>

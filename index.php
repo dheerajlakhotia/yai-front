@@ -34,8 +34,8 @@ $active_page = basename($_SERVER['PHP_SELF'], ".php");
 
                     <!-- Dropdown Menu Start -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
                             More
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -89,6 +89,7 @@ $active_page = basename($_SERVER['PHP_SELF'], ".php");
                             <strong class="number" data-number="1000"></strong>
                             <span>Children in Bikaner</span>
                         </div>
+
                     </div>
                 </div>
                 <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
@@ -127,45 +128,48 @@ $active_page = basename($_SERVER['PHP_SELF'], ".php");
             <div class="row d-flex">
                 <div class="col-md-4 ftco-animate">
                     <div class="cause-entry">
-                        <a href="#" class="img" style="background-image: url(images/cause-1.jpg);"></a>
+                        <a href="activity-detail.php" class="img"
+                            style="background-image: url(images/cause-1.jpg);"></a>
                         <div class="text p-3 p-md-4 d-flex flex-column justify-content-between">
                             <h6>
                                 <span class="mr-2"><i class="bi bi-calendar"></i></span><a>01-01-2024</a>
                             </h6>
                             <span class="mr-2"><i class="bi bi-geo-alt"></i> BIKANER</span>
                             <div class="d-flex justify-content-center mt-4">
-                                <button type="button" class="btn btn-primary" data-toggle="modal"
-                                    data-target=".bd-example-modal-lg">SEE DETAILS</button>
+                                <a href="activity-detail.php"> <button type="button" class="btn btn-primary">SEE
+                                        DETAILS</button></a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 ftco-animate">
                     <div class="cause-entry">
-                        <a href="#" class="img" style="background-image: url(images/cause-1.jpg);"></a>
+                        <a href="activity-detail.php" class="img"
+                            style="background-image: url(images/cause-1.jpg);"></a>
                         <div class="text p-3 p-md-4 d-flex flex-column justify-content-between">
                             <h6>
                                 <span class="mr-2"><i class="bi bi-calendar"></i></span><a>01-01-2024</a>
                             </h6>
                             <span class="mr-2"><i class="bi bi-geo-alt"></i> BIKANER</span>
                             <div class="d-flex justify-content-center mt-4">
-                                <button type="button" class="btn btn-primary" data-toggle="modal"
-                                    data-target=".bd-example-modal-lg">SEE DETAILS</button>
+                                <a href="activity-detail.php"> <button type="button" class="btn btn-primary">SEE
+                                        DETAILS</button></a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 ftco-animate">
                     <div class="cause-entry">
-                        <a href="#" class="img" style="background-image: url(images/cause-1.jpg);"></a>
+                        <a href="activity-detail.php" class="img"
+                            style="background-image: url(images/cause-1.jpg);"></a>
                         <div class="text p-3 p-md-4 d-flex flex-column justify-content-between">
                             <h6>
                                 <span class="mr-2"><i class="bi bi-calendar"></i></span><a>01-01-2024</a>
                             </h6>
                             <span class="mr-2"><i class="bi bi-geo-alt"></i> BIKANER</span>
                             <div class="d-flex justify-content-center mt-4">
-                                <button type="button" class="btn btn-primary" data-toggle="modal"
-                                    data-target=".bd-example-modal-lg">SEE DETAILS</button>
+                                <a href="activity-detail.php"> <button type="button" class="btn btn-primary">SEE
+                                        DETAILS</button></a>
                             </div>
                         </div>
                     </div>
@@ -301,52 +305,52 @@ $active_page = basename($_SERVER['PHP_SELF'], ".php");
             <div class="row d-flex">
                 <div class="col-md-4 d-flex ftco-animate">
                     <div class="blog-entry align-self-stretch">
-                        <a href="blog-single.php" class="block-20"
+                        <a href="single-blog.php" class="block-20"
                             style="background-image: url('images/image_1.jpg');"></a>
                         <div class="text p-4 d-block">
                             <div class="meta mb-3">
-                                <div><a href="#">Sept 10, 2018</a></div>
-                                <div><a href="#">Admin</a></div>
+                                <div>Sept 10, 2018</div>
+                                <div>Admin</div>
 
                             </div>
                             <h3 class="heading mt-3"><a href="single-blog.php">Hurricane Irma has devastated Florida</a>
                             </h3>
                             <p>A small river named Duden flows by their place and supplies it with the necessary
-                                regelialia.</p>
+                                regelialia.</p><a href="single-blog.php">Read more <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 d-flex ftco-animate">
                     <div class="blog-entry align-self-stretch">
-                        <a href="blog-single.php" class="block-20"
+                        <a href="single-blog.php" class="block-20"
                             style="background-image: url('images/image_2.jpg');"></a>
                         <div class="text p-4 d-block">
                             <div class="meta mb-3">
-                                <div><a href="#">Sept 10, 2018</a></div>
-                                <div><a href="#">Admin</a></div>
+                                <div>Sept 10, 2018</div>
+                                <div>Admin</div>
 
                             </div>
                             <h3 class="heading mt-3"><a href="single-blog.php">Hurricane Irma has devastated Florida</a>
                             </h3>
                             <p>A small river named Duden flows by their place and supplies it with the necessary
-                                regelialia.</p>
+                                regelialia.</p><a href="single-blog.php">Read more <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 d-flex ftco-animate">
                     <div class="blog-entry align-self-stretch">
-                        <a href="blog-single.php" class="block-20"
+                        <a href="single-blog.php" class="block-20"
                             style="background-image: url('images/image_3.jpg');"></a>
                         <div class="text p-4 d-block">
                             <div class="meta mb-3">
-                                <div><a href="#">Sept 10, 2018</a></div>
-                                <div><a href="#">Admin</a></div>
+                                <div>Sept 10, 2018</div>
+                                <div>Admin</div>
 
                             </div>
                             <h3 class="heading mt-3"><a href="single-blog.php">Hurricane Irma has devastated Florida</a>
                             </h3>
                             <p>A small river named Duden flows by their place and supplies it with the necessary
-                                regelialia.</p>
+                                regelialia.</p><a href="single-blog.php">Read more <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -371,7 +375,7 @@ $active_page = basename($_SERVER['PHP_SELF'], ".php");
             <div class="row d-flex">
                 <div class="col-md-4 d-flex ftco-animate">
                     <div class="blog-entry align-self-stretch">
-                        <a href="blog-single.php" class="block-20" style="background-image: url('images/event-1.jpg');">
+                        <a class="block-20" style="background-image: url('images/event-1.jpg');">
                         </a>
                         <div class="text p-4 d-block">
                             <div class="meta mb-3">
@@ -394,7 +398,7 @@ $active_page = basename($_SERVER['PHP_SELF'], ".php");
                 </div>
                 <div class="col-md-4 d-flex ftco-animate">
                     <div class="blog-entry align-self-stretch">
-                        <a href="blog-single.php" class="block-20" style="background-image: url('images/event-1.jpg');">
+                        <a class="block-20" style="background-image: url('images/event-1.jpg');">
                         </a>
                         <div class="text p-4 d-block">
                             <div class="meta mb-3">
@@ -417,7 +421,7 @@ $active_page = basename($_SERVER['PHP_SELF'], ".php");
                 </div>
                 <div class="col-md-4 d-flex ftco-animate">
                     <div class="blog-entry align-self-stretch">
-                        <a href="blog-single.php" class="block-20" style="background-image: url('images/event-1.jpg');">
+                        <a class="block-20" style="background-image: url('images/event-1.jpg');">
                         </a>
                         <div class="text p-4 d-block">
                             <div class="meta mb-3">
@@ -440,6 +444,32 @@ $active_page = basename($_SERVER['PHP_SELF'], ".php");
                 </div>
                 <div class="col-md-12 text-center">
                     <p><a href="event.php" class="btn btn-white px-3 py-2 mt-2">SEE ALL</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Event Details</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p><strong>Event Name:</strong> Fun day</p>
+                        <p><strong>Description:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Cumque, possimus!</p>
+                        <p><strong>Venue:</strong> jail road,bikaner</p>
+                        <p><strong>Date:</strong> 01-01-2024</p>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
                 </div>
             </div>
         </div>

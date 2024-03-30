@@ -10172,7 +10172,7 @@ h5,
 }
 
 .ftco-section-3 {
-  padding: 8em 0;
+  padding: 1em 0;
   position: relative;
 }
 .ftco-section-3 .overlay {
@@ -10835,7 +10835,7 @@ textarea.form-control {
 }
 
 .ftco-section {
-  padding: 7em 0;
+  padding: 2em 0;
   position: relative;
 }
 @media (max-width: 767.98px) {
@@ -10894,7 +10894,7 @@ textarea.form-control {
   color: rgba(255, 255, 255, 0.7);
 }
 .ftco-footer a:hover {
-  color: #fff;
+  color: #e72929;
 }
 .ftco-footer .ftco-heading-2 {
   font-size: 17px;

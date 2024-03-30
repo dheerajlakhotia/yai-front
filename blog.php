@@ -15,18 +15,35 @@
                         live the blind texts.</p>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <form action="#" method="GET" class="row align-items-center">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <input type="text" class="form-control form-control-sm" id="search" name="search"
+                                    placeholder="Search">
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <button type="submit" class="btn btn-primary btn-sm btn-block">Search</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
             <div class="row d-flex">
                 <div class="col-md-4 d-flex ftco-animate">
                     <div class="blog-entry align-self-stretch">
-                        <a href="blog-single.php" class="block-20" style="background-image: url('images/image_1.jpg');">
+                        <a href="single-blog.php" class="block-20" style="background-image: url('images/image_1.jpg');">
                         </a>
                         <div class="text p-4 d-block">
                             <div class="meta mb-3">
-                                <div><a href="#">Sept 10, 2018</a></div>
-                                <div><a href="#">Admin</a></div>
-                                <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+                                <div>Sept 10, 2018</div>
+                                <div>Admin</div>
+
                             </div>
-                            <h3 class="heading mt-3"><a href="blog-single.php">Hurricane Irma has devastated Florida</a>
+                            <h3 class="heading mt-3"><a href="single-blog.php">Hurricane Irma has devastated Florida</a>
                             </h3>
                             <p>A small river named Duden flows by their place and supplies it with the necessary
                                 regelialia.</p>
@@ -35,15 +52,16 @@
                 </div>
                 <div class="col-md-4 d-flex ftco-animate">
                     <div class="blog-entry align-self-stretch">
-                        <a href="blog-single.php" class="block-20" style="background-image: url('images/image_2.jpg');">
+                        <a href="single-blog.php" class="block-20" style="background-image: url('images/image_2.jpg');">
                         </a>
                         <div class="text p-4 d-block">
                             <div class="meta mb-3">
-                                <div><a href="#">Sept 10, 2018</a></div>
-                                <div><a href="#">Admin</a></div>
-                                <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+                                <div>Sept 10, 2018</div>
+                                <div>Admin</div>
+
                             </div>
-                            <h3 class="heading mt-3"><a href="#">Hurricane Irma has devastated Florida</a></h3>
+                            <h3 class="heading mt-3"><a href="single-blog.php">Hurricane Irma has devastated Florida</a>
+                            </h3>
                             <p>A small river named Duden flows by their place and supplies it with the necessary
                                 regelialia.</p>
                         </div>
@@ -51,15 +69,16 @@
                 </div>
                 <div class="col-md-4 d-flex ftco-animate">
                     <div class="blog-entry align-self-stretch">
-                        <a href="blog-single.php" class="block-20" style="background-image: url('images/image_3.jpg');">
+                        <a href="single-blog.php" class="block-20" style="background-image: url('images/image_3.jpg');">
                         </a>
                         <div class="text p-4 d-block">
                             <div class="meta mb-3">
-                                <div><a href="#">Sept 10, 2018</a></div>
-                                <div><a href="#">Admin</a></div>
-                                <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+                                <div>Sept 10, 2018</div>
+                                <div>Admin</div>
+
                             </div>
-                            <h3 class="heading mt-3"><a href="#">Hurricane Irma has devastated Florida</a></h3>
+                            <h3 class="heading mt-3"><a href="single-blog.php">Hurricane Irma has devastated Florida</a>
+                            </h3>
                             <p>A small river named Duden flows by their place and supplies it with the necessary
                                 regelialia.</p>
                         </div>
@@ -67,15 +86,16 @@
                 </div>
                 <div class="col-md-4 d-flex ftco-animate">
                     <div class="blog-entry align-self-stretch">
-                        <a href="blog-single.php" class="block-20" style="background-image: url('images/image_4.jpg');">
+                        <a href="single-blog.php" class="block-20" style="background-image: url('images/image_4.jpg');">
                         </a>
                         <div class="text p-4 d-block">
                             <div class="meta mb-3">
-                                <div><a href="#">Sept 10, 2018</a></div>
-                                <div><a href="#">Admin</a></div>
-                                <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+                                <div>Sept 10, 2018</div>
+                                <div>Admin</div>
+
                             </div>
-                            <h3 class="heading mt-3"><a href="#">Hurricane Irma has devastated Florida</a></h3>
+                            <h3 class="heading mt-3"><a href="single-blog.php">Hurricane Irma has devastated Florida</a>
+                            </h3>
                             <p>A small river named Duden flows by their place and supplies it with the necessary
                                 regelialia.</p>
                         </div>
@@ -83,15 +103,16 @@
                 </div>
                 <div class="col-md-4 d-flex ftco-animate">
                     <div class="blog-entry align-self-stretch">
-                        <a href="blog-single.php" class="block-20" style="background-image: url('images/image_5.jpg');">
+                        <a href="single-blog.php" class="block-20" style="background-image: url('images/image_5.jpg');">
                         </a>
                         <div class="text p-4 d-block">
                             <div class="meta mb-3">
-                                <div><a href="#">Sept 10, 2018</a></div>
-                                <div><a href="#">Admin</a></div>
-                                <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+                                <div>Sept 10, 2018</div>
+                                <div>Admin</div>
+
                             </div>
-                            <h3 class="heading mt-3"><a href="#">Hurricane Irma has devastated Florida</a></h3>
+                            <h3 class="heading mt-3"><a href="single-blog.php">Hurricane Irma has devastated Florida</a>
+                            </h3>
                             <p>A small river named Duden flows by their place and supplies it with the necessary
                                 regelialia.</p>
                         </div>
@@ -99,15 +120,16 @@
                 </div>
                 <div class="col-md-4 d-flex ftco-animate">
                     <div class="blog-entry align-self-stretch">
-                        <a href="blog-single.php" class="block-20" style="background-image: url('images/image_6.jpg');">
+                        <a href="single-blog.php" class="block-20" style="background-image: url('images/image_6.jpg');">
                         </a>
                         <div class="text p-4 d-block">
                             <div class="meta mb-3">
-                                <div><a href="#">Sept 10, 2018</a></div>
-                                <div><a href="#">Admin</a></div>
-                                <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+                                <div>Sept 10, 2018</div>
+                                <div>Admin</div>
+
                             </div>
-                            <h3 class="heading mt-3"><a href="#">Hurricane Irma has devastated Florida</a></h3>
+                            <h3 class="heading mt-3"><a href="single-blog.php">Hurricane Irma has devastated Florida</a>
+                            </h3>
                             <p>A small river named Duden flows by their place and supplies it with the necessary
                                 regelialia.</p>
                         </div>

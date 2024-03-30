@@ -63,7 +63,7 @@
                     </div>
 
 
-
+                    <a href="index.php"><i class="bi bi-arrow-left"></i>Return Home</a>
 
 
 
@@ -72,15 +72,63 @@
 
 
 
+
             </div>
-        </div>
-
-
 
         </div>
 
+
+
+        </div>
+
+
         </div>
         </div>
+
+        <section class="recent-posts mt-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Recent Posts</h2>
+                <div class="row">
+                    <!-- First Recent Post Card -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="path_to_image" class="card-img-top" alt="Post Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Post Title</h5>
+                                <p class="card-text">Post Excerpt goes here. You can limit the characters to keep it
+                                    brief.</p>
+                                <a href="#" class="btn btn-primary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Second Recent Post Card -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="path_to_image" class="card-img-top" alt="Post Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Post Title</h5>
+                                <p class="card-text">Post Excerpt goes here. You can limit the characters to keep it
+                                    brief.</p>
+                                <a href="#" class="btn btn-primary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Third Recent Post Card -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="path_to_image" class="card-img-top" alt="Post Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Post Title</h5>
+                                <p class="card-text">Post Excerpt goes here. You can limit the characters to keep it
+                                    brief.</p>
+                                <a href="#" class="btn btn-primary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </section> <!-- .section -->
 
     <?php require_once 'includes/footer.php' ?>

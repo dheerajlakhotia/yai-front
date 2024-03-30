@@ -85,6 +85,75 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-md-4 d-flex ftco-animate">
+                    <div class="blog-entry align-self-stretch">
+                        <a href="blog-single.php" class="block-20" style="background-image: url('images/event-1.jpg');">
+                        </a>
+                        <div class="text p-4 d-block">
+                            <div class="meta mb-3">
+                                <div><a>Sep. 10, 2018</a></div>
+                                <div><a>Admin</a></div>
+                            </div>
+                            <h3 class="heading mb-4"><a>Fun day</a></h3>
+                            <p class="time-loc"><span class="mr-2"><i class="icon-clock-o"></i> 10:30AM-03:30PM</span>
+                                <span><i class="icon-map-o"></i> Venue Main Campus</span>
+                            </p>
+                            <p>A small river named Duden flows by their place and supplies it with the necessary
+                                regelialia.</p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#exampleModalCenter">
+                                See Datails
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex ftco-animate">
+                    <div class="blog-entry align-self-stretch">
+                        <a href="blog-single.php" class="block-20" style="background-image: url('images/event-1.jpg');">
+                        </a>
+                        <div class="text p-4 d-block">
+                            <div class="meta mb-3">
+                                <div><a>Sep. 10, 2018</a></div>
+                                <div><a>Admin</a></div>
+                            </div>
+                            <h3 class="heading mb-4"><a>Fun day</a></h3>
+                            <p class="time-loc"><span class="mr-2"><i class="icon-clock-o"></i> 10:30AM-03:30PM</span>
+                                <span><i class="icon-map-o"></i> Venue Main Campus</span>
+                            </p>
+                            <p>A small river named Duden flows by their place and supplies it with the necessary
+                                regelialia.</p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#exampleModalCenter">
+                                See Datails
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex ftco-animate">
+                    <div class="blog-entry align-self-stretch">
+                        <a href="blog-single.php" class="block-20" style="background-image: url('images/event-1.jpg');">
+                        </a>
+                        <div class="text p-4 d-block">
+                            <div class="meta mb-3">
+                                <div><a>Sep. 10, 2018</a></div>
+                                <div><a>Admin</a></div>
+                            </div>
+                            <h3 class="heading mb-4"><a>Fun day</a></h3>
+                            <p class="time-loc"><span class="mr-2"><i class="icon-clock-o"></i> 10:30AM-03:30PM</span>
+                                <span><i class="icon-map-o"></i> Venue Main Campus</span>
+                            </p>
+                            <p>A small river named Duden flows by their place and supplies it with the necessary
+                                regelialia.</p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#exampleModalCenter">
+                                See Datails
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
 
             </div>
 
@@ -111,6 +180,22 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col text-center">
+                <div class="block-27">
+                    <ul>
+                        <li><a href="#">&lt;</a></li>
+                        <li class="active"><span>1</span></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">&gt;</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
