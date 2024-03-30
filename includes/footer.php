@@ -19,13 +19,13 @@
                     <div class="ftco-footer-widget mb-4 ml-md-4">
                         <h2 class="ftco-heading-2">Pages</h2>
                         <ul class="list-unstyled">
-                            <li><a href="#" class="py-2 d-block">Home</a></li>
-                            <li><a href="#" class="py-2 d-block">About</a></li>
-                            <li><a href="#" class="py-2 d-block">Activity</a></li>
-                            <li><a href="#" class="py-2 d-block">Gallery</a></li>
-                            <li><a href="#" class="py-2 d-block">Events</a></li>
-                            <li><a href="#" class="py-2 d-block">location</a></li>
-                            <li><a href="#" class="py-2 d-block">Testimonial</a></li>
+                            <li><a href="index.php" class="py-2 d-block">Home</a></li>
+                            <li><a href="about.php" class="py-2 d-block">About</a></li>
+                            <li><a href="activity.php" class="py-2 d-block">Activity</a></li>
+                            <li><a href="gallery.php" class="py-2 d-block">Gallery</a></li>
+                            <li><a href="event.php" class="py-2 d-block">Events</a></li>
+                            <li><a href="location.php" class="py-2 d-block">location</a></li>
+                            <li><a href="testimonial.php" class="py-2 d-block">Testimonial</a></li>
                         </ul>
 
                     </div>
@@ -34,8 +34,8 @@
                     <div class="ftco-footer-widget mb-4 ml-md-4">
                         <h2 class="ftco-heading-2">Join Us</h2>
                         <ul class="list-unstyled">
-                            <li><a href="#" class="py-2 d-block">Be a volunteer</a></li>
-                            <li><a href="#" class="py-2 d-block">Internship</a></li>
+                            <li><a href="volenteer.php" class="py-2 d-block">Be a volunteer</a></li>
+                            <li><a href="internship.php" class="py-2 d-block">Internship</a></li>
                         </ul>
 
                     </div>
