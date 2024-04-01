@@ -17,6 +17,12 @@
                 <label for="exampleInputname">Full Names <span style="color: red;">*</span></label>
                 <input type="text" class="form-control" id="exampleInputname" placeholder="Enter your full name">
             </div>
+            <div class="form-group">
+                <label for="exampleInputImage">Upload Image <span style="color: red;">*</span></label>
+                <input type="file" class="form-control-file" id="exampleInputImage" name="image"
+                    accept=".jpg, .jpeg, .png" required>
+                <small class="form-text text-muted">Please upload a JPG, JPEG, or PNG image.</small>
+            </div>
 
             <div class="form-group">
                 <label>Gender <span style="color: red;">*</span></label><br>

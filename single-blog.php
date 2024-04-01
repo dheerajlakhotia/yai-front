@@ -92,7 +92,8 @@
                     <!-- First Recent Post Card -->
                     <div class="col-md-4 mb-4">
                         <div class="card">
-                            <img src="path_to_image" class="card-img-top" alt="Post Image">
+                            <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                class="card-img-top" alt="Post Image">
                             <div class="card-body">
                                 <h5 class="card-title">Post Title</h5>
                                 <p class="card-text">Post Excerpt goes here. You can limit the characters to keep it
@@ -104,7 +105,8 @@
                     <!-- Second Recent Post Card -->
                     <div class="col-md-4 mb-4">
                         <div class="card">
-                            <img src="path_to_image" class="card-img-top" alt="Post Image">
+                            <img src="https://images.unsplash.com/photo-1588681664899-f142ff2dc9b1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                class="card-img-top" alt="Post Image">
                             <div class="card-body">
                                 <h5 class="card-title">Post Title</h5>
                                 <p class="card-text">Post Excerpt goes here. You can limit the characters to keep it
@@ -116,7 +118,8 @@
                     <!-- Third Recent Post Card -->
                     <div class="col-md-4 mb-4">
                         <div class="card">
-                            <img src="path_to_image" class="card-img-top" alt="Post Image">
+                            <img src="https://images.unsplash.com/photo-1585776245991-cf89dd7fc73a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                class="card-img-top" alt="Post Image">
                             <div class="card-body">
                                 <h5 class="card-title">Post Title</h5>
                                 <p class="card-text">Post Excerpt goes here. You can limit the characters to keep it

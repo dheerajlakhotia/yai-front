@@ -24,8 +24,8 @@
                                     placeholder="Search">
                             </div>
                         </div>
-                        <div class="col-md-2">
-                            <button type="submit" class="btn btn-primary btn-sm btn-block">Search</button>
+                        <div class="col-md-2 ">
+                            <button type="submit" class="btn btn-primary btn-sm btn-block mb-4">Search</button>
                         </div>
                     </form>
                 </div>
