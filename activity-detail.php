@@ -36,7 +36,8 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>Yash</td>
+                                        <td>Yash <br> <span>(11:00 - 1:00)</span></td>
+
                                         <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet,
                                             perferendis.</td>
                                     </tr>
