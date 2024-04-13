@@ -53,14 +53,6 @@
                         blanditiis alias laborum sint dolore. Dolores, iure, reprehenderit. Error provident, pariatur
                         cupiditate soluta doloremque aut ratione. Harum voluptates mollitia illo minus praesentium,
                         rerum ipsa debitis, inventore?</p>
-                    <div class="tag-widget post-tag-container mb-5 mt-5">
-                        <div class="tagcloud">
-                            <a href="#" class="tag-cloud-link">Life</a>
-                            <a href="#" class="tag-cloud-link">Sport</a>
-                            <a href="#" class="tag-cloud-link">Tech</a>
-                            <a href="#" class="tag-cloud-link">Travel</a>
-                        </div>
-                    </div>
 
 
                     <a href="index.php"><i class="bi bi-arrow-left"></i>Return Home</a>

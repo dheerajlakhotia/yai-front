@@ -20,7 +20,6 @@
                         <h2 class="ftco-heading-2">Pages</h2>
                         <ul class="list-unstyled">
                             <li><a href="index.php" class="py-2 d-block">Home</a></li>
-                            <li><a href="about.php" class="py-2 d-block">About</a></li>
                             <li><a href="activity.php" class="py-2 d-block">Activity</a></li>
                             <li><a href="gallery.php" class="py-2 d-block">Gallery</a></li>
                             <li><a href="event.php" class="py-2 d-block">Events</a></li>
@@ -45,6 +44,10 @@
                         <h2 class="ftco-heading-2">Importent</h2>
                         <ul class="list-unstyled">
                             <li><a href="#" class="py-2 d-block">Site Map</a></li>
+                            <li><a href="about.php" class="py-2 d-block">About</a></li>
+                            <li><a href="contact.php" class="py-2 d-block">Contact Us</a></li>
+                            <li><a href="terms-and-condition.php" class="py-2 d-block">Terms & Condition</a></li>
+                            <li><a href="privacy-policy.php" class="py-2 d-block"> privacy policy</a></li>
                         </ul>
 
                     </div>
@@ -113,6 +116,26 @@
     </script>
     <script src="js/google-map.js"></script>
     <script src="js/main.js"></script>
+
+
+
+    <script>
+function validateForm() {
+    var email = document.getElementById('email').value;
+    var emailError = document.getElementById('emailError');
+
+    // Regular expression for email validation
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(email)) {
+        emailError.textContent = 'Invalid email format';
+        return false;
+    } else {
+        emailError.textContent = '';
+        return true;
+    }
+}
+    </script>
 
 
     </body>
