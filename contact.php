@@ -3,6 +3,34 @@
 <body>
 
     <?php require_once'includes/navbar.php'?>
+    <?php
+// Check if form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+   
+    // Prepare and bind SQL statement
+    $sql = "INSERT INTO contactform (name, email, subject, message, created_at) VALUES (?, ?, ?, ?, ?)";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("sssss", $name, $email, $subject, $message, $created_at);
+
+    // Set parameters and execute
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
+    $created_at = $_POST['created_at'];
+
+    if ($stmt->execute()) {
+        echo "<script>alert('Message sent successfully');</script>";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+
+    // Close statement and connection
+    $stmt->close();
+    $conn->close();
+}
+?>
+
 
 
     <section class="ftco-section contact-section ftco-degree-bg">
@@ -17,25 +45,28 @@
             <div class="row block-9">
                 <div class="col-md-6 pr-md-5">
                     <h4 class="mb-4">Do you have any questions?</h4>
-                    <form action="#">
+                    <form action="#" method="post">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Your Name">
+                            <input type="text" class="form-control" placeholder="Your Name" name="name">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Your Email">
+                            <input type="text" class="form-control" placeholder="Your Email" name="email">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Subject">
+                            <input type="text" class="form-control" placeholder="Subject" name="subject">
                         </div>
                         <div class="form-group">
-                            <textarea name="" id="" cols="30" rows="7" class="form-control"
+                            <textarea name="message" id="" cols="30" rows="7" class="form-control"
                                 placeholder="Message"></textarea>
                         </div>
+                        <!-- Hidden field for Created At with current timestamp -->
+                        <input type="hidden" name="created_at" value="<?php echo date('Y-m-d H:i:s'); ?>">
                         <div class="form-group">
                             <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
                         </div>
                     </form>
                 </div>
+
                 <div class="col-md-6">
                     <div class="row d-flex mb-5 contact-info">
                         <div class="col-md-12 mb-4">

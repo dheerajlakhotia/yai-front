@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php require 'includes/dbconfig.php'?>
+
 <head>
     <?php
     // Get the current page file name

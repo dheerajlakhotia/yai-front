@@ -1,15 +1,45 @@
-<?php require_once'includes/header.php'?>
+<?php require_once 'includes/header.php' ?>
 
 <body>
+    <?php require_once 'includes/navbar.php' ?>
+    <?php
+    // Handle form submission
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Retrieve form data
+        $donationType = $_POST['donationType'];
+        $description = $_POST['description'];
+        $name = $_POST['contactName'];
+        $email = $_POST['contactEmail'];
+        $mobile = $_POST['contactPhone'];
+        $address = $_POST['address'];
 
-    <?php require_once'includes/navbar.php'?>
+        // Set default status
+        $status = 0;
 
+        // Insert data into database
+        $sql = "INSERT INTO donation_requests (donation_type, description, name, email, mobile, address, status) 
+                VALUES ('$donationType', '$description', '$name', '$email', '$mobile', '$address', '$status')";
 
+       if ($conn->query($sql) === TRUE) {
+    echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
+              Donation request submitted successfully
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>';
+} else {
+    echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+              Error: ' . $sql . '<br>' . $conn->error . '
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>';
+}
 
+        // Close database connection
+        $conn->close();
+    }
+    ?>
 
     <div class="container my-5">
         <h2 class="text-center mb-4">Donate to Our NGO</h2>
-        <form action="request_call.php" method="post">
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
 
             <div class="form-group">
                 <label for="donationType">Select Donation Type <span style="color: red;">*</span></label>
@@ -19,11 +49,8 @@
                     <option value="clothes">Clothes</option>
                     <option value="stationery">Stationery</option>
                 </select>
-                <span>we dont accept money as donation</span>
+                <span>we don't accept money as donation</span>
             </div>
-
-
-            <!-- For Food, No Quantity Needed -->
 
             <div class="form-group">
                 <label for="description">Description <span style="color: red;">*</span></label>

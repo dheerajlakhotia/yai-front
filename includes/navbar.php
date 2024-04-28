@@ -1,5 +1,18 @@
  <?php
+ include 'includes/dbconfig.php';
 $active_page = basename($_SERVER['PHP_SELF'], ".php");
+// Fetch the logo image path from the database
+$sql = "SELECT logo_filename FROM general_details";
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+    $row = mysqli_fetch_assoc($result);
+    $logoPath = $row['logo_filename'];
+} else {
+    // Handle case where no data is found
+    $logoPath = "images/default-logo.jpg"; // Path to a default logo image
+}
+
 ?>
 
  <nav class="navbar navbar-expand-lg navbar-light bg-white ftco_navbar single-nav" id="ftco-navbar">

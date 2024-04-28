@@ -1,5 +1,27 @@
 <?php require_once'includes/header.php'?>
 
+<?php
+// Assuming you have already established a database connection
+
+// Fetch the "About Us" data from the database
+$sql = "SELECT * FROM aboutus"; // Assuming you have a table named 'about_us'
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+    $row = mysqli_fetch_assoc($result);
+    $title = $row['title'];
+    $description = $row['description'];
+    $image = $row['image']; // Assuming you have an 'image' column in your database
+} else {
+    // Handle case where no data is found
+    $title = "Title Placeholder";
+    $description = "Description Placeholder";
+    $image = "images/default.jpg"; // Path to a default image
+}
+?>
+
+
+
 <body>
 
     <?php require_once'includes/navbar.php'?>
@@ -14,24 +36,26 @@
             </div>
             <div class="row d-flex">
                 <div class="col-md-6 d-flex ftco-animate">
-                    <div class="img img-about align-self-stretch"
-                        style="background-image: url(images/bg_3.jpg); width: 100%;"></div>
+                    <img src="<?php echo $image; ?>" class="img-about align-self-stretch"
+                        style="max-width: 80%; height: auto;" alt="About Us Image">
+
                 </div>
                 <div class="col-md-6 pl-md-5 ftco-animate">
-                    <h2 class="mb-4">Welcome to Welfare Stablished Since 1898</h2>
-                    <p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question
-                        Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven
-                        versalia, put her initial into the belt and made herself on the way.</p>
-                    <p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it
-                        would have been rewritten a thousand times and everything that was left from its origin would be
-                        the word "and" and the Little Blind Text should turn around and return to its own, safe country.
-                        But nothing the copy said could convince her and so it didn’t take long until a few insidious
-                        Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their
-                        agency, where they abused her for their.</p>
+                    <h2 class="mb-4"><?php echo $title; ?></h2>
+                    <p><?php echo $description; ?></p>
                 </div>
             </div>
+
         </div>
     </section>
+
+
+    <?php 
+    
+    // SQL query to fetch founding members with role_id = 1
+        $sql = "SELECT name, email, image FROM yai_users WHERE role_id = 1";
+        $result = $conn->query($sql);
+?>
 
     <section class="ftco-section">
         <div class="container">
@@ -39,100 +63,39 @@
                 Founding Members
             </div>
             <div class="row">
-                <!-- First Card -->
-                <div class="col-md-4">
-                    <div class="card my-3">
-                        <img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cGVyc29ufGVufDB8fDB8fHww"
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Dheeraj</h5>
-                            <div class="contact-icons">
-                                <p class="card-text">
-                                    <i class="fas fa-envelope"></i> dheeraj@example.com
-                                </p>
+                <?php
+            // SQL query to fetch founding members with role_id = 1
+            $sql = "SELECT name, email, image FROM yai_users WHERE role_id = 1";
+            $result = $conn->query($sql);
+
+            if ($result->num_rows > 0) {
+                // Output data of each row
+                while ($row = $result->fetch_assoc()) {
+                    echo "<div class='col-md-4'>
+                            <div class='card my-3'>
+                                <img src='" . $row["image"] . "' class='card-img-top' alt=''>
+                                <div class='card-body'>
+                                    <h5 class='card-title'>" . $row["name"] . "</h5>
+                                    <div class='contact-icons'>
+                                        <p class='card-text'>
+                                            <i class='fas fa-envelope'></i> " . $row["email"] . "
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
+                        </div>";
+                }
+            } else {
+                echo "0 results";
+            }
 
-                <!-- First Card -->
-                <div class="col-md-4">
-                    <div class="card my-3">
-                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww"
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Riya</h5>
-                            <div class="contact-icons">
-                                <p class="card-text">
-                                    <i class="fas fa-envelope"></i> dheeraj@example.com
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- First Card -->
-                <div class="col-md-4">
-                    <div class="card my-3">
-                        <img src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29ufGVufDB8fDB8fHww"
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Rohan</h5>
-
-
-
-                            <div class="contact-icons">
-                                <p class="card-text">
-                                    <i class="fas fa-envelope"></i> dheeraj@example.com
-                                </p>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- First Card -->
-                <div class="col-md-4">
-                    <div class="card my-3">
-                        <img src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29ufGVufDB8fDB8fHww"
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Rohan</h5>
-
-
-
-                            <div class="contact-icons">
-                                <p class="card-text">
-                                    <i class="fas fa-envelope"></i> dheeraj@example.com
-                                </p>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- First Card -->
-                <div class="col-md-4">
-                    <div class="card my-3">
-                        <img src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29ufGVufDB8fDB8fHww"
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Rohan</h5>
-
-
-
-                            <div class="contact-icons">
-                                <p class="card-text">
-                                    <i class="fas fa-envelope"></i> dheeraj@example.com
-                                </p>
-
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+            // Close connection
+            $conn->close();
+            ?>
             </div><!-- End Row -->
         </div>
     </section>
+
 
     <section class="ftco-counter ftco-intro ftco-intro-2" id="section-counter">
         <div class="container">
