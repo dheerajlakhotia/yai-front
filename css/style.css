@@ -78,6 +78,68 @@ body {
   text-align: left;
   background-color: #fff;
 }
+/* Gallery styling */
+.ftco-gallery .gallery {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 20px; /* Reduced the bottom margin */
+}
+
+.ftco-gallery .gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  transition: transform 0.3s ease; /* Added transition for smoother scaling */
+}
+
+.ftco-gallery .gallery:hover img {
+  transform: scale(1.1); /* Increased scale on hover */
+}
+
+.ftco-gallery .gallery .icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.ftco-gallery .gallery:hover .icon {
+  opacity: 1;
+}
+
+/* Pagination styling */
+.block-27 ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.block-27 ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.block-27 ul li a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background: #007bff;
+  color: #fff;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.block-27 ul li.active a,
+.block-27 ul li a:hover {
+  background: #fff;
+  color: #007bff;
+}
 
 /* Customize the size of the video previews */
 .short-video {

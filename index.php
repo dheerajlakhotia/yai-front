@@ -4,12 +4,24 @@
 
     <?php
 $active_page = basename($_SERVER['PHP_SELF'], ".php");
+// Fetch the logo image path from the database
+$sql = "SELECT logo FROM image";
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+    $row = mysqli_fetch_assoc($result);
+    $logoPath = $row['logo'];
+} else {
+    // Handle case where no data is found
+    $logoPath = "images/default-logo.jpg"; // Path to a default logo image
+}
 ?>
 
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
         <div class="container">
             <a href="index.php" style="display: inline-block; border-radius: 50%;">
-                <img src="images/yai-logo.jpg" alt="" style="max-height: 70px; max-width: 70px; border-radius: 50%;">
+                <img src="<?php echo $logoPath; ?>" alt=""
+                    style="max-height: 70px; max-width: 70px; border-radius: 50%;">
             </a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
@@ -57,6 +69,25 @@ $active_page = basename($_SERVER['PHP_SELF'], ".php");
         </div>
     </nav>
 
+    <?php
+// Assuming you have already established a connection to your MySQL database
+
+// Fetch the link from the aboutvideo table
+$sql = "SELECT link FROM aboutvideo";
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+    // Fetch the first row only as per the provided HTML structure
+    $row = mysqli_fetch_assoc($result);
+    $youtubeLink = $row["link"];
+} else {
+    // If no record exists, set a default link or handle as per your requirement
+    $youtubeLink = "#"; // You can set a default link or handle accordingly
+}
+
+
+?>
+
     <div class="hero-wrap"
         style="background-image: url('https://images.unsplash.com/photo-1542810634-71277d95dcbb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"
         data-stellar-background-ratio="0.5">
@@ -70,43 +101,101 @@ $active_page = basename($_SERVER['PHP_SELF'], ".php");
                     <p class="mb-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Created by <a
                             href="#">YAI</a></p>
 
-                    <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><a
-                            href="https://www.youtube.com/watch?v=bv_gDBubpxQ"
-                            class="btn btn-white btn-outline-white px-4 py-3 popup-vimeo"><span
-                                class="icon-play mr-2"></span>Watch Video</a></p>
+                    <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+                        <a href="<?php echo htmlspecialchars($youtubeLink); ?>"
+                            class="btn btn-white btn-outline-white px-4 py-3 popup-vimeo">
+                            <span class="icon-play mr-2"></span>Watch Video
+                        </a>
+                    </p>
                 </div>
             </div>
         </div>
     </div>
 
-    <section class="ftco-counter ftco-intro" id="section-counter">
+    <section class="ftco-section bg-light">
         <div class="container">
-            <div class="row no-gutters">
-                <div class="col-md-5 d-flex justify-content-center counter-wrap ftco-animate">
-                    <div class="block-18 color-1 align-items-stretch">
-                        <div class="text">
-                            <span>Educate Over</span>
-                            <strong class="number" data-number="1000"></strong>
-                            <span>Children in Bikaner</span>
-                        </div>
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title mb-4">Daily Drive - <?php echo date("Y-m-d"); ?></h5>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="list-group list-group-horizontal" id="list-tab" role="tablist">
+                                <?php
+                            // Fetch unique locations from the activities table for the current date
+                            $current_date = date("Y-m-d");
+                            $sql = "SELECT DISTINCT location FROM activities WHERE DATE(created_at) = '$current_date'";
+                            $result = mysqli_query($conn, $sql);
 
-                    </div>
-                </div>
-                <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-                    <div class="block-18 color-2 align-items-stretch">
-                        <div class="text">
-                            <h3 class="mb-4">Donate Something</h3>
-                            <p>Even the all-powerful Pointing has no control about the blind texts.</p>
-                            <p><a href="donate.php" class="btn btn-white px-3 py-2 mt-2">Donate Now</a></p>
+                            if (mysqli_num_rows($result) > 0) {
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    // Display each location as a list item
+                                    echo '<a class="list-group-item list-group-item-action" id="list-' . str_replace(' ', '-', strtolower($row['location'])) . '-list" data-bs-toggle="list" href="#list-' . str_replace(' ', '-', strtolower($row['location'])) . '" role="tab" aria-controls="list-' . str_replace(' ', '-', strtolower($row['location'])) . '">' . $row['location'] . '</a>';
+                                }
+                            } else {
+                                echo "<p class='text-muted'>No activities found for today.</p>";
+                            }
+                            ?>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-                    <div class="block-18 color-3 align-items-stretch">
-                        <div class="text">
-                            <h3 class="mb-4">Be a Volunteer</h3>
-                            <p>Even the all-powerful Pointing has no control about the blind texts.</p>
-                            <p><a href="volenteer.php" class="btn btn-white px-3 py-2 mt-2">Be A Volunteer</a></p>
+                    <div class="row mt-4">
+                        <div class="col-12">
+                            <div class="tab-content" id="nav-tabContent">
+                                <?php
+                            // Reset locations result set pointer
+                            mysqli_data_seek($result, 0);
+
+                            if (mysqli_num_rows($result) > 0) {
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    // Fetch activities for the current location and date
+                                    $location = $row['location'];
+                                    $activities_query = "SELECT * FROM activities WHERE location = '$location' AND DATE(created_at) = '$current_date'";
+                                    $activities_result = mysqli_query($conn, $activities_query);
+                                    ?>
+                                <!-- Display activity details for each location -->
+                                <div class="tab-pane fade show"
+                                    id="list-<?php echo str_replace(' ', '-', strtolower($location)); ?>"
+                                    role="tabpanel"
+                                    aria-labelledby="list-<?php echo str_replace(' ', '-', strtolower($location)); ?>-list">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr class="text-dark">
+                                                    <th scope="col">User</th>
+                                                    <th scope="col">Time</th>
+                                                    <th scope="col">Description</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <?php
+                                            // Display activities for the current location and date
+                                            while ($activity_row = mysqli_fetch_assoc($activities_result)) {
+                                                // Fetch user's name from yai_users table
+                                                $user_id = $activity_row['user_id'];
+                                                $user_query = "SELECT name FROM yai_users WHERE id = '$user_id'";
+                                                $user_result = mysqli_query($conn, $user_query);
+                                                $user_data = mysqli_fetch_assoc($user_result);
+
+                                                // Format start time and end time
+                                                $start_time = date('h:i A', strtotime($activity_row['start_time']));
+                                                $end_time = date('h:i A', strtotime($activity_row['end_time']));
+
+                                                echo '<tr>
+                                                        <td>' . $user_data['name'] . '</td>
+                                                        <td>' . $start_time . ' - ' . $end_time . '</td>
+                                                        <td>' . $activity_row['description'] . '</td>
+                                                    </tr>';
+                                            }
+                                            ?>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <?php
+                                }
+                            }
+                            ?>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -116,71 +205,9 @@ $active_page = basename($_SERVER['PHP_SELF'], ".php");
 
 
 
-    <section class="ftco-section">
-        <div class="container">
-            <div class="row justify-content-center mb-5 pb-3">
-                <div class="col-md-7 heading-section ftco-animate text-center">
-                    <h2 class="mb-4">DAILY DRIVES</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
-                        live the blind texts.</p>
-                </div>
-            </div>
-            <div class="row d-flex">
-                <div class="col-md-4 ftco-animate">
-                    <div class="cause-entry">
-                        <a href="activity-detail.php" class="img"
-                            style="background-image: url(images/cause-1.jpg);"></a>
-                        <div class="text p-3 p-md-4 d-flex flex-column justify-content-between">
-                            <h6>
-                                <span class="mr-2"><i class="bi bi-calendar"></i></span><a>01-01-2024</a>
-                            </h6>
-                            <span class="mr-2"><i class="bi bi-geo-alt"></i> BIKANER</span>
-                            <div class="d-flex justify-content-center mt-4">
-                                <a href="activity-detail.php"> <button type="button" class="btn btn-primary">SEE
-                                        DETAILS</button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 ftco-animate">
-                    <div class="cause-entry">
-                        <a href="activity-detail.php" class="img"
-                            style="background-image: url(images/cause-1.jpg);"></a>
-                        <div class="text p-3 p-md-4 d-flex flex-column justify-content-between">
-                            <h6>
-                                <span class="mr-2"><i class="bi bi-calendar"></i></span><a>01-01-2024</a>
-                            </h6>
-                            <span class="mr-2"><i class="bi bi-geo-alt"></i> BIKANER</span>
-                            <div class="d-flex justify-content-center mt-4">
-                                <a href="activity-detail.php"> <button type="button" class="btn btn-primary">SEE
-                                        DETAILS</button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 ftco-animate">
-                    <div class="cause-entry">
-                        <a href="activity-detail.php" class="img"
-                            style="background-image: url(images/cause-1.jpg);"></a>
-                        <div class="text p-3 p-md-4 d-flex flex-column justify-content-between">
-                            <h6>
-                                <span class="mr-2"><i class="bi bi-calendar"></i></span><a>01-01-2024</a>
-                            </h6>
-                            <span class="mr-2"><i class="bi bi-geo-alt"></i> BIKANER</span>
-                            <div class="d-flex justify-content-center mt-4">
-                                <a href="activity-detail.php"> <button type="button" class="btn btn-primary">SEE
-                                        DETAILS</button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-md-12 text-center mt-5">
-                    <p><a href="activity.php" class="btn btn-white px-3 py-2 mt-2">SEE ALL</a></p>
-                </div>
-            </div>
-        </div>
-    </section>
+
+
 
 
 
@@ -229,67 +256,29 @@ $active_page = basename($_SERVER['PHP_SELF'], ".php");
         </div>
     </section>
 
-
     <section class="ftco-gallery">
         <div class="d-md-flex">
-            <a href="images/cause-2.jpg"
-                class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate"
-                style="background-image: url(images/cause-2.jpg);">
-                <div class="icon d-flex justify-content-center align-items-center">
-                    <span class="icon-search"></span>
-                </div>
-            </a>
-            <a href="images/cause-3.jpg"
-                class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate"
-                style="background-image: url(images/cause-3.jpg);">
-                <div class="icon d-flex justify-content-center align-items-center">
-                    <span class="icon-search"></span>
-                </div>
-            </a>
-            <a href="images/cause-4.jpg"
-                class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate"
-                style="background-image: url(images/cause-4.jpg);">
-                <div class="icon d-flex justify-content-center align-items-center">
-                    <span class="icon-search"></span>
-                </div>
-            </a>
-            <a href="images/cause-5.jpg"
-                class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate"
-                style="background-image: url(images/cause-5.jpg);">
-                <div class="icon d-flex justify-content-center align-items-center">
-                    <span class="icon-search"></span>
-                </div>
-            </a>
-        </div>
-        <div class="d-md-flex">
-            <a href="images/cause-6.jpg"
-                class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate"
-                style="background-image: url(images/cause-6.jpg);">
-                <div class="icon d-flex justify-content-center align-items-center">
-                    <span class="icon-search"></span>
-                </div>
-            </a>
-            <a href="images/image_3.jpg"
-                class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate"
-                style="background-image: url(images/image_3.jpg);">
-                <div class="icon d-flex justify-content-center align-items-center">
-                    <span class="icon-search"></span>
-                </div>
-            </a>
-            <a href="images/image_1.jpg"
-                class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate"
-                style="background-image: url(images/image_1.jpg);">
-                <div class="icon d-flex justify-content-center align-items-center">
-                    <span class="icon-search"></span>
-                </div>
-            </a>
-            <a href="images/image_2.jpg"
-                class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate"
-                style="background-image: url(images/image_2.jpg);">
-                <div class="icon d-flex justify-content-center align-items-center">
-                    <span class="icon-search"></span>
-                </div>
-            </a>
+            <?php
+        // Fetch image URLs from the activities table
+        $sql = "SELECT images FROM activities WHERE images IS NOT NULL";
+        $result = mysqli_query($conn, $sql);
+
+        if (mysqli_num_rows($result) > 0) {
+            while ($row = mysqli_fetch_assoc($result)) {
+                // Separate multiple images and display them individually
+                $images = explode(',', $row['images']);
+                foreach ($images as $image) {
+                    echo '<a href="../uploads/' . htmlspecialchars($image) . '" class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate" style="background-image: url(\'../uploads/' . htmlspecialchars($image) . '\');">
+                            <div class="icon d-flex justify-content-center align-items-center">
+                                <span class="icon-search"></span>
+                            </div>
+                        </a>';
+                }
+            }
+        } else {
+            echo "<p>No images found.</p>";
+        }
+        ?>
         </div>
     </section>
 
