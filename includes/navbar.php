@@ -49,7 +49,6 @@ if (mysqli_num_rows($result) > 0) {
                         More
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="blog.php">Blog</a>
                         <a class="dropdown-item" href="gallery.php">Gallery</a>
                         <a class="dropdown-item" href="event.php">Events</a>
                         <a class="dropdown-item" href="location.php">Locations</a>
