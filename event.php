@@ -6,6 +6,16 @@
 
 
 
+    <?php
+// Fetch data from events table
+$eventsPerPage = 6; // Number of events per page
+$page = isset($_GET['page']) ? $_GET['page'] : 1; // Current page number, default to 1
+$offset = ($page - 1) * $eventsPerPage; // Offset for pagination
+
+$sql = "SELECT * FROM events LIMIT $offset, $eventsPerPage";
+$result = $conn->query($sql);
+?>
+
     <section class="ftco-section">
         <div class="container">
             <div class="row justify-content-center mb-5 pb-3">
@@ -16,190 +26,59 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4 d-flex ftco-animate">
-                    <div class="blog-entry align-self-stretch">
-                        <a href="blog-single.php" class="block-20" style="background-image: url('images/event-1.jpg');">
-                        </a>
-                        <div class="text p-4 d-block">
-                            <div class="meta mb-3">
-                                <div><a>Sep. 10, 2018</a></div>
-                                <div><a>Admin</a></div>
-                            </div>
-                            <h3 class="heading mb-4"><a>Fun day</a></h3>
-                            <p class="time-loc"><span class="mr-2"><i class="icon-clock-o"></i> 10:30AM-03:30PM</span>
-                                <span><i class="icon-map-o"></i> Venue Main Campus</span>
-                            </p>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary
-                                regelialia.</p>
-                            <button type="button" class="btn btn-primary" data-toggle="modal"
-                                data-target="#exampleModalCenter">
-                                See Datails
-                            </button>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 d-flex ftco-animate">
-                    <div class="blog-entry align-self-stretch">
-                        <a href="blog-single.php" class="block-20" style="background-image: url('images/event-1.jpg');">
-                        </a>
-                        <div class="text p-4 d-block">
-                            <div class="meta mb-3">
-                                <div><a>Sep. 10, 2018</a></div>
-                                <div><a>Admin</a></div>
-                            </div>
-                            <h3 class="heading mb-4"><a>Fun day</a></h3>
-                            <p class="time-loc"><span class="mr-2"><i class="icon-clock-o"></i> 10:30AM-03:30PM</span>
-                                <span><i class="icon-map-o"></i> Venue Main Campus</span>
-                            </p>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary
-                                regelialia.</p>
-                            <button type="button" class="btn btn-primary" data-toggle="modal"
-                                data-target="#exampleModalCenter">
-                                See Datails
-                            </button>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 d-flex ftco-animate">
-                    <div class="blog-entry align-self-stretch">
-                        <a href="blog-single.php" class="block-20" style="background-image: url('images/event-1.jpg');">
-                        </a>
-                        <div class="text p-4 d-block">
-                            <div class="meta mb-3">
-                                <div><a>Sep. 10, 2018</a></div>
-                                <div><a>Admin</a></div>
-                            </div>
-                            <h3 class="heading mb-4"><a>Fun day</a></h3>
-                            <p class="time-loc"><span class="mr-2"><i class="icon-clock-o"></i> 10:30AM-03:30PM</span>
-                                <span><i class="icon-map-o"></i> Venue Main Campus</span>
-                            </p>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary
-                                regelialia.</p>
-                            <button type="button" class="btn btn-primary" data-toggle="modal"
-                                data-target="#exampleModalCenter">
-                                See Datails
-                            </button>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 d-flex ftco-animate">
-                    <div class="blog-entry align-self-stretch">
-                        <a href="blog-single.php" class="block-20" style="background-image: url('images/event-1.jpg');">
-                        </a>
-                        <div class="text p-4 d-block">
-                            <div class="meta mb-3">
-                                <div><a>Sep. 10, 2018</a></div>
-                                <div><a>Admin</a></div>
-                            </div>
-                            <h3 class="heading mb-4"><a>Fun day</a></h3>
-                            <p class="time-loc"><span class="mr-2"><i class="icon-clock-o"></i> 10:30AM-03:30PM</span>
-                                <span><i class="icon-map-o"></i> Venue Main Campus</span>
-                            </p>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary
-                                regelialia.</p>
-                            <button type="button" class="btn btn-primary" data-toggle="modal"
-                                data-target="#exampleModalCenter">
-                                See Datails
-                            </button>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 d-flex ftco-animate">
-                    <div class="blog-entry align-self-stretch">
-                        <a href="blog-single.php" class="block-20" style="background-image: url('images/event-1.jpg');">
-                        </a>
-                        <div class="text p-4 d-block">
-                            <div class="meta mb-3">
-                                <div><a>Sep. 10, 2018</a></div>
-                                <div><a>Admin</a></div>
-                            </div>
-                            <h3 class="heading mb-4"><a>Fun day</a></h3>
-                            <p class="time-loc"><span class="mr-2"><i class="icon-clock-o"></i> 10:30AM-03:30PM</span>
-                                <span><i class="icon-map-o"></i> Venue Main Campus</span>
-                            </p>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary
-                                regelialia.</p>
-                            <button type="button" class="btn btn-primary" data-toggle="modal"
-                                data-target="#exampleModalCenter">
-                                See Datails
-                            </button>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 d-flex ftco-animate">
-                    <div class="blog-entry align-self-stretch">
-                        <a href="blog-single.php" class="block-20" style="background-image: url('images/event-1.jpg');">
-                        </a>
-                        <div class="text p-4 d-block">
-                            <div class="meta mb-3">
-                                <div><a>Sep. 10, 2018</a></div>
-                                <div><a>Admin</a></div>
-                            </div>
-                            <h3 class="heading mb-4"><a>Fun day</a></h3>
-                            <p class="time-loc"><span class="mr-2"><i class="icon-clock-o"></i> 10:30AM-03:30PM</span>
-                                <span><i class="icon-map-o"></i> Venue Main Campus</span>
-                            </p>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary
-                                regelialia.</p>
-                            <button type="button" class="btn btn-primary" data-toggle="modal"
-                                data-target="#exampleModalCenter">
-                                See Datails
-                            </button>
-
-                        </div>
-                    </div>
-                </div>
-
+                <?php 
+            if ($result->num_rows > 0) {
+                // Output data of each row
+                while($row = $result->fetch_assoc()) {
+                    echo '<div class="col-md-4 d-flex ftco-animate">';
+                    echo '<div class="blog-entry align-self-stretch">';
+                    echo '<a href="blog-single.php" class="block-20" style="background-image: url(' . $row["image"] . ');"></a>';
+                    echo '<div class="text p-4 d-block">';
+                    echo '<div class="meta mb-3">';
+                    echo '<div><a>' . $row["event_date"] . '</a></div>';
+                    echo '<div><a>' . $row["venue"] . '</a></div>';
+                    echo '</div>';
+                    echo '<h3 class="heading mb-4"><a>' . $row["event_name"] . '</a></h3>';
+                    echo '<p class="time-loc"><span class="mr-2"><i class="icon-clock-o"></i> ' . $row["event_date"] . '</span>';
+                    echo '<span><i class="icon-map-o"></i> Venue ' . $row["venue"] . '</span></p>';
+                    echo '<p>' . $row["description"] . '</p>';
+                    echo '</div>';
+                    echo '</div>';
+                    echo '</div>';
+                }
+            } else {
+                echo "No events found.";
+            }
+            ?>
             </div>
+            <?php
+        // Pagination
+        $sql = "SELECT COUNT(*) AS total FROM events";
+        $result = $conn->query($sql);
+        $row = $result->fetch_assoc();
+        $totalPages = ceil($row['total'] / $eventsPerPage);
 
-        </div>
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Event Details</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <p><strong>Event Name:</strong> Fun day</p>
-                        <p><strong>Description:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Cumque, possimus!</p>
-                        <p><strong>Venue:</strong> jail road,bikaner</p>
-                        <p><strong>Date:</strong> 01-01-2024</p>
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row mt-5">
-            <div class="col text-center">
-                <div class="block-27">
-                    <ul>
-                        <li><a href="#">&lt;</a></li>
-                        <li class="active"><span>1</span></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#">&gt;</a></li>
-                    </ul>
-                </div>
-            </div>
+        echo '<div class="row mt-5">';
+        echo '<div class="col text-center">';
+        echo '<div class="block-27">';
+        echo '<ul>';
+        if ($page > 1) {
+            echo '<li><a href="?page='.($page-1).'">&lt;</a></li>';
+        }
+        for ($i = 1; $i <= $totalPages; $i++) {
+            echo '<li '.($page == $i ? 'class="active"' : '').'><a href="?page='.$i.'">'.$i.'</a></li>';
+        }
+        if ($page < $totalPages) {
+            echo '<li><a href="?page='.($page+1).'">&gt;</a></li>';
+        }
+        echo '</ul>';
+        echo '</div>';
+        echo '</div>';
+        echo '</div>';
+        ?>
         </div>
     </section>
+
 
 
     <?php require_once 'includes/footer.php' ?>

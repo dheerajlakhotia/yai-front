@@ -78,7 +78,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             <!-- Remember me and Forgot password -->
             <div class="d-flex justify-content-between align-items-center mb-3">
-                <a href="#!" class="text-decoration-none small">Forgot password?</a>
+                <a href="forgot_password.php" class="text-decoration-none small">Forgot password?</a>
             </div>
 
             <!-- Sign in button -->

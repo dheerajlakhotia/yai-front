@@ -1,10 +1,8 @@
-<?php require_once'includes/header.php'?>
+<?php require_once 'includes/header.php'?>
 
 <body>
 
-    <?php require_once'includes/navbar.php'?>
-
-
+    <?php require_once 'includes/navbar.php'?>
 
     <section class="ftco-section ftco-gallery">
         <div class="container">
@@ -16,109 +14,60 @@
                 </div>
             </div>
             <div class="d-md-flex">
-                <a href="images/cause-2.jpg"
-                    class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate"
-                    style="background-image: url(images/cause-2.jpg);">
-                    <div class="icon d-flex justify-content-center align-items-center">
-                        <span class="icon-search"></span>
-                    </div>
-                </a>
-                <a href="images/cause-3.jpg"
-                    class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate"
-                    style="background-image: url(images/cause-3.jpg);">
-                    <div class="icon d-flex justify-content-center align-items-center">
-                        <span class="icon-search"></span>
-                    </div>
-                </a>
-                <a href="images/cause-4.jpg"
-                    class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate"
-                    style="background-image: url(images/cause-4.jpg);">
-                    <div class="icon d-flex justify-content-center align-items-center">
-                        <span class="icon-search"></span>
-                    </div>
-                </a>
-                <a href="images/cause-5.jpg"
-                    class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate"
-                    style="background-image: url(images/cause-5.jpg);">
-                    <div class="icon d-flex justify-content-center align-items-center">
-                        <span class="icon-search"></span>
-                    </div>
-                </a>
-            </div>
-            <div class="d-md-flex">
-                <a href="images/cause-6.jpg"
-                    class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate"
-                    style="background-image: url(images/cause-6.jpg);">
-                    <div class="icon d-flex justify-content-center align-items-center">
-                        <span class="icon-search"></span>
-                    </div>
-                </a>
-                <a href="images/image_3.jpg"
-                    class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate"
-                    style="background-image: url(images/image_3.jpg);">
-                    <div class="icon d-flex justify-content-center align-items-center">
-                        <span class="icon-search"></span>
-                    </div>
-                </a>
-                <a href="images/image_1.jpg"
-                    class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate"
-                    style="background-image: url(images/image_1.jpg);">
-                    <div class="icon d-flex justify-content-center align-items-center">
-                        <span class="icon-search"></span>
-                    </div>
-                </a>
-                <a href="images/image_2.jpg"
-                    class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate"
-                    style="background-image: url(images/image_2.jpg);">
-                    <div class="icon d-flex justify-content-center align-items-center">
-                        <span class="icon-search"></span>
-                    </div>
-                </a>
-            </div>
-            <div class="d-md-flex">
-                <a href="images/event-1.jpg"
-                    class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate"
-                    style="background-image: url(images/event-1.jpg);">
-                    <div class="icon d-flex justify-content-center align-items-center">
-                        <span class="icon-search"></span>
-                    </div>
-                </a>
-                <a href="images/event-2.jpg"
-                    class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate"
-                    style="background-image: url(images/event-2.jpg);">
-                    <div class="icon d-flex justify-content-center align-items-center">
-                        <span class="icon-search"></span>
-                    </div>
-                </a>
-                <a href="images/image_1.jpg"
-                    class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate"
-                    style="background-image: url(images/image_4.jpg);">
-                    <div class="icon d-flex justify-content-center align-items-center">
-                        <span class="icon-search"></span>
-                    </div>
-                </a>
-                <a href="images/image_2.jpg"
-                    class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate"
-                    style="background-image: url(images/event-4.jpg);">
-                    <div class="icon d-flex justify-content-center align-items-center">
-                        <span class="icon-search"></span>
-                    </div>
-                </a>
+                <?php
+               
+
+                // Pagination
+                $limit = 4; // Number of images per page
+                $page = isset($_GET['page']) ? $_GET['page'] : 1; // Get the current page number
+                $start = ($page - 1) * $limit; // Calculate starting index for fetching images
+
+                // Fetch data from the activities table with pagination
+               $sql = "SELECT images FROM activities WHERE images IS NOT NULL AND images <> '' LIMIT $start, $limit";
+
+                $result = $conn->query($sql);
+
+                // Output images dynamically
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        // Check if the image path is not null
+                        if ($row['images'] != null) {
+                            echo '<a href="' . $row["images"] . '" class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate" style="background-image: url(' . $row["images"] . ');">';
+                            echo '<div class="icon d-flex justify-content-center align-items-center">';
+                            echo '<span class="icon-search"></span>';
+                            echo '</div>';
+                            echo '</a>';
+                        }
+                    }
+                } else {
+                    echo "0 results";
+                }
+
+             
+                ?>
             </div>
         </div>
 
-
+        <!-- Pagination Links -->
         <div class="row mt-5">
             <div class="col text-center">
                 <div class="block-27">
                     <ul>
-                        <li><a href="#">&lt;</a></li>
-                        <li class="active"><span>1</span></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#">&gt;</a></li>
+                        <?php
+                       
+
+                        // Get total number of pages
+                        $sql = "SELECT COUNT(id) AS total FROM activities WHERE images IS NOT NULL";
+                        $result = $conn->query($sql);
+                        $row = $result->fetch_assoc();
+                        $total_pages = ceil($row["total"] / $limit);
+
+                        // Display pagination links
+                        for ($i = 1; $i <= $total_pages; $i++) {
+                            echo "<li><a href='gallery.php?page=" . $i . "'>" . $i . "</a></li>";
+                        }
+
+                        ?>
                     </ul>
                 </div>
             </div>
@@ -131,9 +80,10 @@
             <div class="row d-md-flex justify-content-center">
                 <div class="col-md-6 volunteer pl-md-5 ftco-animate d-flex justify-content-center align-items-center">
                     <!-- Modified "Be a Volunteer" button with increased padding -->
-                    <a href="volenteer.php" class="btn btn-primary btn-lg">Be a Volunteer</a>
+                    <a href="volunteer.php" class="btn btn-primary btn-lg">Be a Volunteer</a>
                 </div>
             </div>
         </div>
     </section>
+
     <?php require_once 'includes/footer.php' ?>

@@ -112,8 +112,7 @@ mysqli_close($conn);
                 <p>
                     Copyright &copy;<script>
                     document.write(new Date().getFullYear());
-                    </script> All rights reserved | Made by Dheeraj lakhotia <i class="icon-heart"
-                        aria-hidden="true"></i>
+                    </script> All rights reserved | Made by PixalTide <i class="icon-heart" aria-hidden="true"></i>
                 </p>
             </div>
         </div>

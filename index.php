@@ -285,6 +285,11 @@ if (mysqli_num_rows($result) > 0) {
 
 
 
+    <?php
+// Fetch data from event table, selecting only the latest 3 events
+$sql = "SELECT * FROM events ORDER BY event_date DESC LIMIT 3";
+$result = $conn->query($sql);
+?>
 
     <section class="ftco-section">
         <div class="container">
@@ -296,104 +301,33 @@ if (mysqli_num_rows($result) > 0) {
                 </div>
             </div>
             <div class="row d-flex">
-                <div class="col-md-4 d-flex ftco-animate">
-                    <div class="blog-entry align-self-stretch">
-                        <a class="block-20" style="background-image: url('images/event-1.jpg');">
-                        </a>
-                        <div class="text p-4 d-block">
-                            <div class="meta mb-3">
-                                <div><a>Sep. 10, 2018</a></div>
-                                <div><a>Admin</a></div>
-                            </div>
-                            <h3 class="heading mb-4"><a>Fun day</a></h3>
-                            <p class="time-loc"><span class="mr-2"><i class="icon-clock-o"></i> 10:30AM-03:30PM</span>
-                                <span><i class="icon-map-o"></i> Venue Main Campus</span>
-                            </p>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary
-                                regelialia.</p>
-                            <button type="button" class="btn btn-primary" data-toggle="modal"
-                                data-target="#exampleModalCenter">
-                                See Datails
-                            </button>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 d-flex ftco-animate">
-                    <div class="blog-entry align-self-stretch">
-                        <a class="block-20" style="background-image: url('images/event-1.jpg');">
-                        </a>
-                        <div class="text p-4 d-block">
-                            <div class="meta mb-3">
-                                <div><a>Sep. 10, 2018</a></div>
-                                <div><a>Admin</a></div>
-                            </div>
-                            <h3 class="heading mb-4"><a>Fun day</a></h3>
-                            <p class="time-loc"><span class="mr-2"><i class="icon-clock-o"></i> 10:30AM-03:30PM</span>
-                                <span><i class="icon-map-o"></i> Venue Main Campus</span>
-                            </p>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary
-                                regelialia.</p>
-                            <button type="button" class="btn btn-primary" data-toggle="modal"
-                                data-target="#exampleModalCenter">
-                                See Datails
-                            </button>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 d-flex ftco-animate">
-                    <div class="blog-entry align-self-stretch">
-                        <a class="block-20" style="background-image: url('images/event-1.jpg');">
-                        </a>
-                        <div class="text p-4 d-block">
-                            <div class="meta mb-3">
-                                <div><a>Sep. 10, 2018</a></div>
-                                <div><a>Admin</a></div>
-                            </div>
-                            <h3 class="heading mb-4"><a>Fun day</a></h3>
-                            <p class="time-loc"><span class="mr-2"><i class="icon-clock-o"></i> 10:30AM-03:30PM</span>
-                                <span><i class="icon-map-o"></i> Venue Main Campus</span>
-                            </p>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary
-                                regelialia.</p>
-                            <button type="button" class="btn btn-primary" data-toggle="modal"
-                                data-target="#exampleModalCenter">
-                                See Datails
-                            </button>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-12 text-center">
-                    <p><a href="event.php" class="btn btn-white px-3 py-2 mt-2">SEE ALL</a></p>
-                </div>
+                <?php 
+            if ($result->num_rows > 0) {
+                // Output data of each row
+                while($row = $result->fetch_assoc()) {
+                    echo '<div class="col-md-4 d-flex ftco-animate">';
+                    echo '<div class="blog-entry align-self-stretch">';
+                    echo '<div class="block-20" style="background-image: url(' . $row["image"] . ');"></div>';
+                    echo '<div class="text p-4 d-block">';
+                    echo '<div class="meta mb-3">';
+                    echo '<div><a>' . $row["event_date"] . '</a></div>';
+                    echo '<div><a>' . $row["venue"] . '</a></div>';
+                    echo '</div>';
+                    echo '<h3 class="heading mb-4"><a>' . $row["event_name"] . '</a></h3>';
+                    echo '<p class="time-loc"><span class="mr-2"><i class="icon-clock-o"></i> ' . $row["event_date"] . '</span>';
+                    echo '<span><i class="icon-map-o"></i> Venue ' . $row["venue"] . '</span></p>';
+                    echo '<p>' . $row["description"] . '</p>';
+                    echo '</div>';
+                    echo '</div>';
+                    echo '</div>';
+                }
+            } else {
+                echo "0 results";
+            }
+            ?>
             </div>
-        </div>
-
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Event Details</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <p><strong>Event Name:</strong> Fun day</p>
-                        <p><strong>Description:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Cumque, possimus!</p>
-                        <p><strong>Venue:</strong> jail road,bikaner</p>
-                        <p><strong>Date:</strong> 01-01-2024</p>
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
+            <div class="col-md-12 text-center">
+                <p><a href="event.php" class="btn btn-white px-3 py-2 mt-2">SEE ALL</a></p>
             </div>
         </div>
     </section>

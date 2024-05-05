@@ -56,10 +56,9 @@ if (mysqli_num_rows($result) > 0) {
         $sql = "SELECT name, email, image FROM yai_users WHERE role_id = 1";
         $result = $conn->query($sql);
 ?>
-
     <section class="ftco-section">
         <div class="container">
-            <div class="display-3 text-center">
+            <div class="display-4 text-center">
                 Founding Members
             </div>
             <div class="row">
@@ -88,48 +87,45 @@ if (mysqli_num_rows($result) > 0) {
             } else {
                 echo "0 results";
             }
+            ?>
+            </div><!-- End Row -->
 
-            // Close connection
-            $conn->close();
+            <!-- Counseling Members Section -->
+            <div class="display-3 text-center">
+                <h4>Counseling Members</h4>
+            </div>
+            <div class="row">
+                <?php
+            // SQL query to fetch counseling members with role_id = 5
+            $sql = "SELECT name, email, image FROM yai_users WHERE role_id = 5";
+            $result = $conn->query($sql);
+
+            if ($result->num_rows > 0) {
+                // Output data of each row
+                while ($row = $result->fetch_assoc()) {
+                    echo "<div class='col-md-3' style='max-width: 200px; margin: auto;'> <!-- Adjust the column width here -->
+                            <div class='card my-3'>
+                                <img src='" . $row["image"] . "' class='card-img-top' alt=''>
+                                <div class='card-body'>
+                                    <h5 class='card-title'>" . $row["name"] . "</h5>
+                                    <div class='contact-icons'>
+                                        <p class='card-text'>
+                                            <i class='fas fa-envelope'></i> " . $row["email"] . "
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>";
+                }
+            } else {
+                echo "0 results";
+            }
             ?>
             </div><!-- End Row -->
         </div>
     </section>
 
 
-    <section class="ftco-counter ftco-intro ftco-intro-2" id="section-counter">
-        <div class="container">
-            <div class="row no-gutters">
-                <div class="col-md-5 d-flex justify-content-center counter-wrap ftco-animate">
-                    <div class="block-18 color-1 align-items-stretch">
-                        <div class="text">
-                            <span>Educate Over</span>
-                            <strong class="number" data-number="1000">0</strong>
-                            <span>Children in Bikaner</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-                    <div class="block-18 color-2 align-items-stretch">
-                        <div class="text">
-                            <h3 class="mb-4">Donate Something</h3>
-                            <p>Even the all-powerful Pointing has no control about the blind texts.</p>
-                            <p><a href="donate.php" class="btn btn-white px-3 py-2 mt-2">Donate Now</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-                    <div class="block-18 color-3 align-items-stretch">
-                        <div class="text">
-                            <h3 class="mb-4">Be a Volunteer</h3>
-                            <p>Even the all-powerful Pointing has no control about the blind texts.</p>
-                            <p><a href="volenteer.php" class="btn btn-white px-3 py-2 mt-2">Be A Volunteer</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
 
 

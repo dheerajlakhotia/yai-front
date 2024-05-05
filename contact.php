@@ -1,38 +1,14 @@
-<?php require_once'includes/header.php'?>
+<?php 
+require_once 'includes/header.php';
+require_once 'includes/navbar.php';
 
-<body>
+// Fetch data from general_details table
+$sql = "SELECT * FROM general_details";
+$result = $conn->query($sql);
 
-    <?php require_once'includes/navbar.php'?>
-    <?php
-// Check if form is submitted
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-   
-    // Prepare and bind SQL statement
-    $sql = "INSERT INTO contactform (name, email, subject, message, created_at) VALUES (?, ?, ?, ?, ?)";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("sssss", $name, $email, $subject, $message, $created_at);
-
-    // Set parameters and execute
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $subject = $_POST['subject'];
-    $message = $_POST['message'];
-    $created_at = $_POST['created_at'];
-
-    if ($stmt->execute()) {
-        echo "<script>alert('Message sent successfully');</script>";
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
-
-    // Close statement and connection
-    $stmt->close();
-    $conn->close();
-}
 ?>
 
-
-
+<body>
     <section class="ftco-section contact-section ftco-degree-bg">
         <div class="container">
             <div class="row justify-content-center mb-5 pb-3">
@@ -42,54 +18,38 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         live the blind texts.</p>
                 </div>
             </div>
-            <div class="row block-9">
-                <div class="col-md-6 pr-md-5">
-                    <h4 class="mb-4">Do you have any questions?</h4>
-                    <form action="#" method="post">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Your Name" name="name">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Your Email" name="email">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Subject" name="subject">
-                        </div>
-                        <div class="form-group">
-                            <textarea name="message" id="" cols="30" rows="7" class="form-control"
-                                placeholder="Message"></textarea>
-                        </div>
-                        <!-- Hidden field for Created At with current timestamp -->
-                        <input type="hidden" name="created_at" value="<?php echo date('Y-m-d H:i:s'); ?>">
-                        <div class="form-group">
-                            <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
-                        </div>
-                    </form>
-                </div>
 
-                <div class="col-md-6">
-                    <div class="row d-flex mb-5 contact-info">
-                        <div class="col-md-12 mb-4">
-                            <h2 class="h4">Contact Information</h2>
-                        </div>
-                        <div class="w-100"></div>
-                        <div class="col-md-6">
-                            <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
-                        </div>
-                        <div class="col-md-6">
-                            <p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
-                        </div>
-                        <div class="col-md-6">
-                            <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
-                        </div>
-                        <div class="col-md-6">
-                            <p><span>Website</span> <a href="#">yoursite.com</a></p>
-                        </div>
+            <div class="col-md-6">
+                <div class="row d-flex mb-5 contact-info">
+                    <div class="col-md-12 mb-4">
+                        <h2 class="h4">Contact Information</h2>
                     </div>
+                    <div class="w-100"></div>
+                    <?php 
+                    if ($result->num_rows > 0) {
+                        // Output data of each row
+                        while($row = $result->fetch_assoc()) {
+                            echo '<div class="col-md-6">';
+                            echo '<p><span>Address:</span> ' . $row["address"] . '</p>';
+                            echo '</div>';
+                            echo '<div class="col-md-6">';
+                            echo '<p><span>Phone:</span> <a href="tel://' . $row["contact_number"] . '">' . $row["contact_number"] . '</a></p>';
+                            echo '</div>';
+                            echo '<div class="col-md-6">';
+                            echo '<p><span>Email:</span> <a href="mailto:' . $row["contact_email"] . '">' . $row["contact_email"] . '</a></p>';
+                            echo '</div>';
+                            echo '<div class="col-md-6">';
+                           
+                            echo '</div>';
+                        }
+                    } else {
+                        echo "0 results";
+                    }
+                    $conn->close();
+                    ?>
                 </div>
             </div>
         </div>
     </section>
-
 
     <?php require_once 'includes/footer.php' ?>
