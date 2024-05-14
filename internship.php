@@ -104,10 +104,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // If there are no errors, proceed with insertion
     if (empty($errors)) {
         // Handle image upload
-        $image = $_FILES["image"]["name"];
-        $image_tmp = $_FILES["image"]["tmp_name"];
-        $image_path = $uploadsDirectory . '/' . basename($_FILES["image"]["name"]);
-        if (move_uploaded_file($image_tmp, $image_path)) {
+        $image_extension = pathinfo($_FILES["image"]["name"], PATHINFO_EXTENSION);
+        $image_path = $uploadsDirectory . '/' . uniqid() . '.' . $image_extension;
+        if (move_uploaded_file($_FILES["image"]["tmp_name"], $image_path)) {
             // Image uploaded successfully
         } else {
             // Failed to upload image
@@ -115,10 +114,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         // Handle ID image upload
-        $idImage = $_FILES["idProof"]["name"];
-        $idImage_tmp = $_FILES["idProof"]["tmp_name"];
-        $idImage_path = $uploadsDirectory . '/' . basename($_FILES["idProof"]["name"]);
-        if (move_uploaded_file($idImage_tmp, $idImage_path)) {
+        $idImage_extension = pathinfo($_FILES["idProof"]["name"], PATHINFO_EXTENSION);
+        $idImage_path = $uploadsDirectory . '/' . uniqid() . '.' . $idImage_extension;
+        if (move_uploaded_file($_FILES["idProof"]["tmp_name"], $idImage_path)) {
             // ID image uploaded successfully
         } else {
             // Failed to upload ID image
@@ -133,7 +131,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Insert data into the database
             $sql = "INSERT INTO yai_users (name, email, gender, address, mobile, dob, occupation, id_type, hobbies, password, role_id, status, image, id_image) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             $stmt = $conn->prepare($sql);
-            $stmt->bind_param("ssssssssssisss", $name, $email, $gender, $address, $mobile, $dob, $occupation, $idType, $hobbies, $password, $roleId, $status, $image, $idImage);
+            $stmt->bind_param("ssssssssssisss", $name, $email, $gender, $address, $mobile, $dob, $occupation, $idType, $hobbies, $password, $roleId, $status, $image_path, $idImage_path);
 
             if ($stmt->execute()) {
                 // Registration successful

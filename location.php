@@ -15,76 +15,69 @@
             </div>
 
             <div class="row">
-                <div class="col-md-6" style="margin-left: 15px;">
-                    <form action="#" method="GET" class="row align-items-center">
-                        <div class="col-md-3">
-                            <div class="form-group">
-                                <label for="city" class="visually-hidden">Select City:</label>
-                                <select class="form-control form-control-sm" id="city" name="city">
-                                    <option value="bikaner">Bikaner</option>
-                                    <option value="jaipur">Jaipur</option>
-                                    <option value="jodhpur">Jodhpur</option>
-                                    <!-- Add more cities as needed -->
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-md-2 mb-5">
-                            <button type="submit" class="btn btn-primary btn-sm btn-block">Apply</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
+                <?php
+                // Query to fetch locations
+                $sql = "SELECT * FROM locations";
+                $result = mysqli_query($conn, $sql);
 
+                // Check if there are any locations
+                if (mysqli_num_rows($result) > 0) {
+                    // Loop through each location
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        // Extract location details
+                        $location_name = $row['LocationName'];
+                        $location_description = $row['Description'];
+                        $location_image = $row['LocationImage'];
 
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card mb-4" style="width: 18rem;">
-                        <img class="card-img-top"
-                            src="https://images.unsplash.com/photo-1518219051733-d8d4fbbf9797?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dmlsbGFnZXxlbnwwfHwwfHx8MA%3D%3D"
-                            alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Location Name</h5>
-                            <p class="card-text">Some quick example text to describe the location and its features.</p>
-                            <a href="#" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4" style="width: 18rem;">
-                        <img class="card-img-top"
-                            src="https://images.unsplash.com/photo-1518219051733-d8d4fbbf9797?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dmlsbGFnZXxlbnwwfHwwfHx8MA%3D%3D"
-                            alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Location Name</h5>
-                            <p class="card-text">Some quick example text to describe the location and its features.</p>
-                            <a href="#" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4" style="width: 18rem;">
-                        <img class="card-img-top"
-                            src="https://images.unsplash.com/photo-1518219051733-d8d4fbbf9797?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dmlsbGFnZXxlbnwwfHwwfHx8MA%3D%3D"
-                            alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Location Name</h5>
-                            <p class="card-text">Some quick example text to describe the location and its features.</p>
-                            <a href="#" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4" style="width: 18rem;">
-                        <img class="card-img-top"
-                            src="https://images.unsplash.com/photo-1518219051733-d8d4fbbf9797?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dmlsbGFnZXxlbnwwfHwwfHx8MA%3D%3D"
-                            alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Location Name</h5>
-                            <p class="card-text">Some quick example text to describe the location and its features.</p>
-                            <a href="#" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                </div>
+                        // Trim description to 50 words
+                        $description_short = implode(' ', array_slice(explode(' ', $location_description), 0, 15));
+
+                        // Display location card
+                        echo '<div class="col-md-4">';
+                        echo '<div class="card mb-4" style="width: 18rem;">';
+                        echo '<img class="card-img-top" src="' . $location_image . '" alt="Card image cap">';
+                        echo '<div class="card-body">';
+                        echo '<h5 class="card-title">' . $location_name . '</h5>';
+                        echo '<p class="card-text">' . $description_short . '...</p>';
+                        // Button trigger modal
+                        echo '<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#locationModal' . $row['LocationName'] . '">Learn More</button>';
+                        echo '</div>';
+                        echo '</div>';
+                        echo '</div>';
+
+                        // Modal for each location
+                        echo '<div class="modal fade" id="locationModal' . $row['LocationName'] . '" tabindex="-1" aria-labelledby="locationModalLabel' . $row['LocationName'] . '" aria-hidden="true">';
+                        echo '<div class="modal-dialog">';
+                        echo '<div class="modal-content">';
+                        echo '<div class="modal-header">';
+                        echo '<h5 class="modal-title" id="locationModalLabel' . $row['LocationName'] . '">' . $location_name . '</h5>';
+                       
+                        echo '</div>';
+                        echo '<div class="modal-body">';
+                        // Display full description and additional details
+                        echo '<p>' . $location_description . '</p>';
+                        echo '<p>Total Children: ' . $row['TotalChildren'] . '</p>';
+                        echo '<p>Total Volunteers: ' . $row['TotalVolunteers'] . '</p>';
+                        echo '<p>City: ' . $row['City'] . '</p>';
+                        echo '<p>State: ' . $row['State'] . '</p>';
+                        echo '</div>';
+                        echo '<div class="modal-footer">';
+                        echo '<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>';
+                        echo '</div>';
+                        echo '</div>';
+                        echo '</div>';
+                        echo '</div>';
+                    }
+                } else {
+                    // No locations found
+                    echo '<div class="col-md-12">';
+                    echo '<p>No locations found.</p>';
+                    echo '</div>';
+                }
+
+                // Close the database connection
+                mysqli_close($conn);
+                ?>
             </div>
 
         </div>
