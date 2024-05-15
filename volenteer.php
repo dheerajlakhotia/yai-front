@@ -182,8 +182,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="row justify-content-center mb-5 pb-3">
             <div class="col-md-7 heading-section ftco-animate text-center">
                 <h2 class="mb-4">BE A PART OF OUR FAMILY</h2>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
-                    live the blind texts.</p>
+                <p>Take the first step towards becoming a catalyst for positive change. Join us as we work together to
+                    build a better tomorrow, one volunteer at a time.</p>
             </div>
         </div>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post"

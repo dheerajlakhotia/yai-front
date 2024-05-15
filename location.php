@@ -9,8 +9,8 @@
             <div class="row justify-content-center mb-5 pb-3">
                 <div class="col-md-7 heading-section ftco-animate text-center">
                     <h2 class="mb-4">LOCATIONS</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
-                        live the blind texts.</p>
+                    <p>Join us in transforming communities and shaping a brighter future. Together, let's make every
+                        place we touch a little bit better.</p>
                 </div>
             </div>
 

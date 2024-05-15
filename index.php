@@ -88,6 +88,7 @@ if (mysqli_num_rows($result) > 0) {
 
 ?>
 
+
     <?php
 
 // Fetch the image URL from the database
@@ -219,7 +220,50 @@ if ($result->num_rows > 0) {
 
 
 
-    <!-- Testimonial Section -->
+
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center mb-5 pb-3">
+                <div class="col-md-7 heading-section ftco-animate text-center">
+                    <h2 class="mb-4">Volunteer Testimonials</h2>
+                    <p>Discover the power of firsthand experiences on our Testimonial Page. Here, you'll find stories of
+                        hope, resilience, and transformation shared by members of our community.</p>
+                </div>
+            </div>
+            <div class="row">
+                <?php
+            // Fetch latest 3 YouTube Short links from database
+            $testimonials_query = "SELECT youtube_link FROM testimonials ORDER BY id DESC LIMIT 3";
+            $testimonials_result = mysqli_query($conn, $testimonials_query);
+
+            while ($row = mysqli_fetch_assoc($testimonials_result)) {
+                $youtube_link = $row["youtube_link"];
+
+                // Extract video ID from the YouTube short link
+                $video_id = substr($youtube_link, strpos($youtube_link, "shorts/") + 7);
+
+                // Construct embed URL using YouTube Embedded Player API
+                $embed_url = "https://www.youtube.com/embed/{$video_id}";
+
+                // Embed the video using iframe
+                echo "<div class='col-md-4'><iframe width='328' height='583' src='{$embed_url}' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe></div>";
+            }
+            ?>
+            </div>
+            <div class="col-md-12 text-center">
+                <p><a href="testimonial.php" class="btn btn-white px-3 py-2 mt-5">SEE ALL</a></p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
 
 
     <section class="ftco-gallery">
@@ -262,8 +306,8 @@ $result = $conn->query($sql);
             <div class="row justify-content-center mb-5 pb-3">
                 <div class="col-md-7 heading-section ftco-animate text-center">
                     <h2 class="mb-4">RECENT EVENT</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
-                        live the blind texts.</p>
+                    <p>Mark your calendars and be part of the change. Together, let's create unforgettable moments and
+                        meaningful impact in our communities.</p>
                 </div>
             </div>
             <div class="row d-flex">

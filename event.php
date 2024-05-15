@@ -20,8 +20,10 @@
         <div class="row justify-content-center mb-5 pb-3">
             <div class="col-md-7 heading-section ftco-animate text-center">
                 <h2 class="mb-4">EVENTS</h2>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
-                    live the blind texts.</p>
+                <p>Mark your calendars and be part of the change. Together, let's create unforgettable moments and
+                    meaningful impact in our communities.
+
+                </p>
             </div>
         </div>
         <div class="row">

@@ -30,8 +30,8 @@ if (mysqli_num_rows($result) > 0) {
             <div class="row justify-content-center mb-5 pb-3">
                 <div class="col-md-7 heading-section ftco-animate text-center">
                     <h2 class="mb-4">WHO WE ARE</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
-                        live the blind texts.</p>
+                    <p>Discover more about our journey, our values, and our commitment to excellence on our "About Us"
+                        page.</p>
                 </div>
             </div>
             <div class="row d-flex">

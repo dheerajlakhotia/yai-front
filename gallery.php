@@ -4,58 +4,49 @@
 
     <?php require_once 'includes/navbar.php'?>
 
-    <section class="ftco-section ftco-gallery">
+    <section class="ftco-gallery">
         <div class="container">
             <div class="row justify-content-center mb-5 pb-3">
                 <div class="col-md-7 heading-section ftco-animate text-center">
                     <h2 class="mb-4">GALLERY</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
-                        live the blind texts.</p>
+                    <p>Welcome to the Gallery page of YAI. Here, you'll discover a visual journey showcasing the
+                        impactful moments, heartfelt interactions, and transformative experiences that define our
+                        mission.</p>
                 </div>
             </div>
             <div class="d-md-flex">
                 <?php
-               
+            // Define the limit for pagination
+            $limit = 4;
 
-                // Pagination
-                $limit = 4; // Number of images per page
-                $page = isset($_GET['page']) ? $_GET['page'] : 1; // Get the current page number
-                $start = ($page - 1) * $limit; // Calculate starting index for fetching images
+            // Fetch image URLs from the activities table
+            $sql = "SELECT images FROM activities WHERE images IS NOT NULL";
+            $result = mysqli_query($conn, $sql);
 
-                // Fetch data from the activities table with pagination
-               $sql = "SELECT images FROM activities WHERE images IS NOT NULL AND images <> '' LIMIT $start, $limit";
-
-                $result = $conn->query($sql);
-
-                // Output images dynamically
-                if ($result->num_rows > 0) {
-                    while ($row = $result->fetch_assoc()) {
-                        // Check if the image path is not null
-                        if ($row['images'] != null) {
-                            echo '<a href="' . $row["images"] . '" class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate" style="background-image: url(' . $row["images"] . ');">';
-                            echo '<div class="icon d-flex justify-content-center align-items-center">';
-                            echo '<span class="icon-search"></span>';
-                            echo '</div>';
-                            echo '</a>';
-                        }
+            if (mysqli_num_rows($result) > 0) {
+                while ($row = mysqli_fetch_assoc($result)) {
+                    // Separate multiple images and display them individually
+                    $images = explode(',', $row['images']);
+                    foreach ($images as $image) {
+                        echo '<a href="../uploads/' . htmlspecialchars($image) . '" class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate" style="background-image: url(\'../uploads/' . htmlspecialchars($image) . '\');">
+                            <div class="icon d-flex justify-content-center align-items-center">
+                                <span class="icon-search"></span>
+                            </div>
+                        </a>';
                     }
-                } else {
-                    echo "0 results";
                 }
-
-             
-                ?>
+            } else {
+                echo "<p>No images found.</p>";
+            }
+            ?>
             </div>
-        </div>
 
-        <!-- Pagination Links -->
-        <div class="row mt-5">
-            <div class="col text-center">
-                <div class="block-27">
-                    <ul>
-                        <?php
-                       
-
+            <!-- Pagination Links -->
+            <div class="row mt-5">
+                <div class="col text-center">
+                    <div class="block-27">
+                        <ul>
+                            <?php
                         // Get total number of pages
                         $sql = "SELECT COUNT(id) AS total FROM activities WHERE images IS NOT NULL";
                         $result = $conn->query($sql);
@@ -66,12 +57,11 @@
                         for ($i = 1; $i <= $total_pages; $i++) {
                             echo "<li><a href='gallery.php?page=" . $i . "'>" . $i . "</a></li>";
                         }
-
                         ?>
-                    </ul>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
     </section>
 
     <section class="ftco-section-3 img" style="background-image: url(images/bg_3.jpg);">
